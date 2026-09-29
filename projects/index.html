@@ -26,7 +26,7 @@ permalink: /projects/
             <p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>
             <h2 class="h3 mb-3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
             <p class="text-secondary mb-0">{{ project.summary }}</p>
-            <a class="btn landing-secondary-action rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>
+            <a class="btn btn-outline-light rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>
             </div>
           </article>
         {% endfor %}

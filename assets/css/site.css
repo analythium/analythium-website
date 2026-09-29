@@ -66,6 +66,11 @@ a:focus {
   color: var(--site-text);
 }
 
+:root[data-theme="light"] .navbar-brand:hover,
+:root[data-theme="light"] .navbar-brand:focus {
+  color: var(--site-text);
+}
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link.active {
@@ -249,6 +254,16 @@ a:focus {
   border-bottom: 1px solid var(--site-border);
 }
 
+.testimonials-featured {
+  border-bottom: 0;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+}
+
+.testimonials-section .section-heading {
+  margin-bottom: 1.5rem;
+}
+
 .client-logos {
   display: flex;
   flex-wrap: wrap;
@@ -316,12 +331,19 @@ a:focus {
 .testimonial-control {
   width: 2.75rem;
   height: 2.75rem;
+  display: inline-grid;
+  place-items: center;
   padding: 0;
   border: 1px solid var(--site-border);
   border-radius: 50%;
   background: var(--site-panel);
   color: var(--site-text);
   font-size: 2rem;
+  line-height: 1;
+}
+
+.testimonial-control span {
+  display: block;
   line-height: 1;
 }
 
@@ -429,6 +451,30 @@ a:focus {
   display: flex;
   flex-direction: column;
   min-width: 0;
+}
+
+.card-content > .btn {
+  align-self: flex-start;
+  min-width: 8.75rem;
+  text-align: center;
+}
+
+:root[data-theme="light"] .card-content > .btn.btn-outline-light {
+  --bs-btn-color: var(--site-accent-dark);
+  --bs-btn-bg: var(--site-panel-soft);
+  --bs-btn-border-color: var(--site-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--site-accent);
+  --bs-btn-hover-border-color: var(--site-accent);
+  border-color: var(--site-accent);
+  background: var(--site-panel-soft);
+  color: var(--site-accent-dark);
+}
+
+:root[data-theme="light"] .card-content > .btn.btn-outline-light:hover,
+:root[data-theme="light"] .card-content > .btn.btn-outline-light:focus-visible {
+  background: var(--site-accent);
+  color: #fff;
 }
 
 .recent-projects {
