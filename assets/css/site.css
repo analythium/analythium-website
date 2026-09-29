@@ -429,6 +429,50 @@ a:focus {
   text-decoration: none;
 }
 
+.contact-page {
+  min-height: 65vh;
+}
+
+.contact-intro {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.contact-intro h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.contact-panel {
+  border: 1px solid var(--site-border);
+  border-radius: 0.5rem;
+  background: var(--site-panel);
+  box-shadow: 0 1rem 3rem var(--site-shadow);
+}
+
+.contact-form .form-label {
+  color: var(--site-text);
+  font-weight: 600;
+}
+
+.contact-form .form-control {
+  border-color: var(--site-border);
+  background: var(--site-panel-soft);
+  color: var(--site-text);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--site-accent);
+  background: var(--site-panel-soft);
+  box-shadow: 0 0 0 0.25rem rgba(186, 104, 200, 0.2);
+  color: var(--site-text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
 @media (max-width: 575.98px) {
   .landing-hero {
     padding: 5rem 0;

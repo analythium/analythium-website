@@ -17,60 +17,11 @@
     </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="{{ '/' | relative_url }}">
-          <img class="site-logo" src="{{ '/assets/images/logo-white.svg' | relative_url }}" data-dark-logo="{{ '/assets/images/logo-white.svg' | relative_url }}" data-light-logo="{{ '/assets/images/logo.svg' | relative_url }}" alt="Analythium logo" width="36" height="32">
-          <span>{{ site.title }}</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="site-nav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item"><a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
-            <li class="nav-item"><a class="nav-link{% if page.url contains '/blog/' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            <li class="nav-item ms-lg-3">
-              <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-                <span class="theme-toggle-icon" aria-hidden="true"></span>
-              </button>
-            </li>
-            <li class="nav-item ms-lg-3"><a class="btn btn-warning rounded-pill px-4" href="{{ '/blog/' | relative_url }}">Read the blog</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include header.html %}
 
     {{ content }}
 
-    <footer class="site-footer py-5">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-md-5">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <img class="site-logo" src="{{ '/assets/images/logo-white.svg' | relative_url }}" data-dark-logo="{{ '/assets/images/logo-white.svg' | relative_url }}" data-light-logo="{{ '/assets/images/logo.svg' | relative_url }}" alt="Analythium logo" width="40" height="36">
-              <span class="h5 mb-0">Analythium</span>
-            </div>
-            <p class="text-secondary mb-0">{{ site.description }}</p>
-          </div>
-          <div class="col-6 col-md-3">
-            <h2 class="h6 text-uppercase text-secondary">Explore</h2>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><a href="{{ '/' | relative_url }}">Home</a></li>
-              <li class="mb-2"><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4">
-            <h2 class="h6 text-uppercase text-secondary">Links</h2>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><a href="https://github.com/analythium/">GitHub</a></li>
-              <li class="mb-2"><a href="https://www.linkedin.com/company/analythium/">LinkedIn</a></li>
-              <li class="mb-2"><a href="https://twitter.com/analythium">Twitter</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>

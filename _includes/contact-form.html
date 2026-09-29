@@ -1,0 +1,23 @@
+<form class="contact-form" method="post" action="{{ '/contact/' | relative_url }}">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <label class="form-label" for="contact-name">Name</label>
+      <input id="contact-name" class="form-control" type="text" name="name" autocomplete="name" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="contact-email">Email</label>
+      <input id="contact-email" class="form-control" type="email" name="email" autocomplete="email" required>
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="contact-company">Company</label>
+      <input id="contact-company" class="form-control" type="text" name="company" autocomplete="organization">
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="contact-message">Message</label>
+      <textarea id="contact-message" class="form-control" name="message" rows="6" required></textarea>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-warning rounded-pill px-4" type="submit">Send message</button>
+    </div>
+  </div>
+</form>
