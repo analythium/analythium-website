@@ -10,7 +10,7 @@ COPY Gemfile Gemfile.lock ./
 
 RUN bundle install
 
-COPY . .
+# COPY . .
 
 EXPOSE 4000 35729
 
