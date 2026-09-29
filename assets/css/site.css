@@ -473,7 +473,74 @@ a:focus {
   resize: vertical;
 }
 
+.about-hero {
+  background: var(--hero-bg);
+}
+
+.about-hero h1,
+.about-section h2,
+.about-collaboration h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.about-lead {
+  max-width: 43rem;
+  margin: 1.5rem auto 2rem;
+  color: var(--site-muted);
+  font-size: 1.25rem;
+}
+
+.about-section h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.about-copy {
+  color: var(--site-muted);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.about-services {
+  background: var(--site-panel-soft);
+}
+
+.about-service {
+  padding: 2rem;
+  border: 1px solid var(--site-border);
+  border-radius: 0.5rem;
+  background: var(--site-panel);
+}
+
+.about-service-number {
+  margin-bottom: 2rem;
+  color: var(--site-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.about-service h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.about-collaboration-inner {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.about-collaboration h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
 @media (max-width: 575.98px) {
+  .about-section .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .landing-hero {
     padding: 5rem 0;
   }
