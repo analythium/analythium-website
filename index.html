@@ -171,17 +171,22 @@ description: Analythium helps teams deliver data products with open source, clou
     function updateControls() {
       const hasOverflow = slides.length > 3 && track.scrollWidth > track.clientWidth;
       controls.hidden = !hasOverflow;
-
-      if (hasOverflow) {
-        previous.disabled = track.scrollLeft <= 1;
-        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
-      }
     }
 
     function scrollTestimonials(direction) {
       const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
       const distance = slides[0].getBoundingClientRect().width + gap;
-      track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+      const edgeThreshold = 8;
+      const atStart = track.scrollLeft <= edgeThreshold;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - edgeThreshold;
+
+      if (direction > 0 && atEnd) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else if (direction < 0 && atStart) {
+        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+      }
     }
 
     previous.addEventListener('click', () => scrollTestimonials(-1));

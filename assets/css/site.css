@@ -256,8 +256,8 @@ a:focus {
 
 .testimonials-featured {
   border-bottom: 0;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .testimonials-section .section-heading {
@@ -347,15 +347,10 @@ a:focus {
   line-height: 1;
 }
 
-.testimonial-control:hover:not(:disabled),
-.testimonial-control:focus-visible:not(:disabled) {
+.testimonial-control:hover,
+.testimonial-control:focus-visible {
   border-color: var(--site-accent);
   color: var(--site-accent);
-}
-
-.testimonial-control:disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
 }
 
 .testimonial {
@@ -373,6 +368,7 @@ a:focus {
   margin: 0 0 2rem;
   color: var(--site-text);
   font-size: 1.125rem;
+  font-style: italic;
   line-height: 1.6;
 }
 
@@ -416,6 +412,12 @@ a:focus {
   border-color: var(--site-accent);
   background: var(--site-accent);
   color: #fff;
+}
+
+:root[data-theme="dark"] .post-tab:hover,
+:root[data-theme="dark"] .post-tab:focus-visible,
+:root[data-theme="dark"] .post-tab.is-active {
+  color: #000;
 }
 
 .post-entry[hidden] {
