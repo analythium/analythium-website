@@ -1,0 +1,8 @@
+title: Analythium
+description: Cloud-native analytics powered by open source
+url: https://analythium.io
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+excerpt_separator: <!--truncate-->
+timezone: UTC
