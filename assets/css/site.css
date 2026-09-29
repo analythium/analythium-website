@@ -199,3 +199,255 @@ a:focus {
 .text-secondary {
   color: var(--site-muted) !important;
 }
+
+.landing-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 7.5rem;
+  background: var(--hero-bg);
+  text-align: center;
+}
+
+.landing-hero-content {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.landing-hero h1,
+.section-heading h2 {
+  margin: 0;
+  color: var(--site-text);
+  font-weight: 700;
+}
+
+.landing-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 1.04;
+}
+
+.landing-hero-summary {
+  max-width: 41rem;
+  margin: 1.5rem auto 2rem;
+  color: var(--site-muted);
+  font-size: 1.25rem;
+}
+
+.landing-secondary-action {
+  border: 1px solid var(--site-border);
+  background: var(--site-panel-soft);
+  color: var(--site-text);
+}
+
+.landing-secondary-action:hover,
+.landing-secondary-action:focus {
+  border-color: var(--site-accent);
+  background: var(--site-panel);
+  color: var(--site-text);
+}
+
+.featured-strip {
+  border-bottom: 1px solid var(--site-border);
+}
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 3rem;
+}
+
+.client-logos img {
+  width: min(180px, 100%);
+  height: 48px;
+  opacity: 0.7;
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+:root[data-theme="light"] .client-logos img {
+  filter: grayscale(1) brightness(0);
+}
+
+.testimonials-section {
+  background: var(--site-panel-soft);
+}
+
+.section-heading {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.testimonial-carousel {
+  position: relative;
+}
+
+.testimonial-track {
+  display: grid;
+  grid-auto-columns: calc((100% - 3rem) / 3);
+  grid-auto-flow: column;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0.25rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.testimonial-track::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-slide {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-control {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--site-border);
+  border-radius: 50%;
+  background: var(--site-panel);
+  color: var(--site-text);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.testimonial-control:hover:not(:disabled),
+.testimonial-control:focus-visible:not(:disabled) {
+  border-color: var(--site-accent);
+  color: var(--site-accent);
+}
+
+.testimonial-control:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 2rem;
+  border: 1px solid var(--site-border);
+  border-radius: 0.5rem;
+  background: var(--site-panel);
+}
+
+.testimonial blockquote {
+  margin: 0 0 2rem;
+  color: var(--site-text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  color: var(--site-muted);
+  font-size: 0.875rem;
+}
+
+.testimonial figcaption strong {
+  color: var(--site-text);
+  font-size: 1rem;
+}
+
+.latest-posts {
+  scroll-margin-top: 5rem;
+}
+
+.post-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 2rem;
+}
+
+.post-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--site-muted);
+  font-weight: 600;
+}
+
+.post-tab:hover,
+.post-tab:focus-visible,
+.post-tab.is-active {
+  border-color: var(--site-accent);
+  background: var(--site-accent);
+  color: #fff;
+}
+
+.post-entry[hidden] {
+  display: none;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card h3 {
+  font-weight: 700;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  color: var(--site-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.post-meta span {
+  color: var(--site-accent);
+}
+
+.post-read-link {
+  margin-top: auto;
+  color: var(--site-gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  .landing-hero {
+    padding: 5rem 0;
+  }
+
+  .landing-hero-summary {
+    font-size: 1.125rem;
+  }
+
+  .client-logos {
+    gap: 1.5rem;
+  }
+
+  .client-logos img {
+    width: 140px;
+    height: auto;
+  }
+
+  .testimonial-track {
+    grid-auto-columns: minmax(17rem, 85%);
+  }
+}

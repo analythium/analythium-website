@@ -1,0 +1,41 @@
+- contact_name: Hannah Reed
+  affiliation: Data Platform Lead
+  testimonial: The guides make otherwise complicated infrastructure decisions feel clear and actionable. It has become essential reading for our team.
+  data: hannah-reed
+  logo: /assets/images/clients/atlas-data.svg
+  featured: yes
+
+- contact_name: Matteo Costa
+  affiliation: Analytics Engineer
+  testimonial: A rare mix of technical depth and real-world restraint. Every article gives us something practical to try in our next release.
+  data: matteo-costa
+  logo: /assets/images/clients/meridian.svg
+  featured: yes
+
+- contact_name: Priya Shah
+  affiliation: Head of Data Science
+  testimonial: The Shiny and deployment coverage saves hours of research. It is concise, opinionated, and consistently useful.
+  data: priya-shah
+  logo: /assets/images/clients/northline.svg
+  featured: yes
+
+- contact_name: Elias Morgan
+  affiliation: Product Analytics Manager
+  testimonial: The deployment articles give our analysts a shared language for making data applications more reliable and easier to operate.
+  data: elias-morgan
+  logo: /assets/images/clients/orbit.svg
+  featured: no
+
+- contact_name: Sofia Nguyen
+  affiliation: Director of Research
+  testimonial: It is the most grounded source we have found for connecting open source choices to the needs of a growing data team.
+  data: sofia-nguyen
+  logo: /assets/images/clients/verge.svg
+  featured: no
+
+- contact_name: Daniel Okafor
+  affiliation: Solutions Architect
+  testimonial: Each post cuts through implementation noise and helps us focus on the engineering decisions that matter in production.
+  data: daniel-okafor
+  logo: /assets/images/clients/atlas-data.svg
+  featured: no

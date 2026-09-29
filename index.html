@@ -4,80 +4,158 @@ title: Cloud-native analytics powered by open source
 description: Analythium helps teams deliver data products with open source, cloud-native tooling, and production-ready workflows.
 ---
 <main>
-  <section class="hero py-5 py-lg-6">
-    <div class="container py-lg-5">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <div class="hero-copy">
-            <p class="section-label mb-3">Analythium</p>
-            <h1 class="display-4 fw-bold mb-3">Cloud-native analytics powered by open source</h1>
-            <p class="lead text-secondary mb-4">A Jekyll + Bootstrap home for Analythium’s content, combining the brand’s dark, high-contrast look with a streamlined publishing workflow for articles and updates.</p>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-warning btn-lg rounded-pill px-4" href="{{ '/blog/' | relative_url }}">Browse blog posts</a>
-              <a class="btn btn-outline-light btn-lg rounded-pill px-4" href="https://github.com/analythium/">View GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="quote-card p-4 p-md-5">
-            <div class="quote-mark mb-3">“</div>
-            <p class="fs-4 mb-4">Open source and cloud-native delivery give analytics teams the flexibility to build faster, scale confidently, and stay in control of their stack.</p>
-            <p class="mb-0 text-secondary">Featured testimonial from the Analythium brand story.</p>
-          </div>
+  <section class="landing-hero">
+    <div class="container">
+      <div class="landing-hero-content">
+        <p class="section-label mb-3">Open source analytics</p>
+        <h1>Build data products your teams can trust.</h1>
+        <p class="landing-hero-summary">Field notes, practical guides, and production patterns for R, Shiny, and cloud-native analytics.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-warning btn-lg rounded-pill px-4" href="#latest">Explore the blog</a>
+          <a class="btn landing-secondary-action btn-lg rounded-pill px-4" href="https://github.com/analythium/">Visit GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="featured-strip py-5" aria-labelledby="featured-heading">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="feature-card p-4">
-            <div class="feature-icon mb-3">R</div>
-            <h2 class="h4">R and Shiny</h2>
-            <p class="text-secondary mb-0">Build interactive data science applications with production-minded tooling and practical delivery patterns.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card p-4">
-            <div class="feature-icon mb-3">C</div>
-            <h2 class="h4">Containers</h2>
-            <p class="text-secondary mb-0">Use containerized workflows for portability, consistency, and dependable deployment across environments.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card p-4">
-            <div class="feature-icon mb-3">S</div>
-            <h2 class="h4">ShinyProxy</h2>
-            <p class="text-secondary mb-0">Run Shiny applications at scale with authentication, authorization, and operational guardrails baked in.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-        <div>
-          <p class="section-label mb-2">Latest writing</p>
-          <h2 class="h1 mb-0">Migrated blog posts</h2>
-        </div>
-        <a class="text-decoration-none fw-semibold" href="{{ '/blog/' | relative_url }}">See all posts →</a>
-      </div>
-      <div class="row g-4">
-        {% assign latest_posts = site.posts | slice: 0, 3 %}
-        {% for post in latest_posts %}
-          <div class="col-lg-4">
-            <article class="post-card p-4 h-100">
-              <p class="text-secondary small mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
-              <h3 class="h4"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p class="text-secondary mb-0">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 24 }}</p>
-            </article>
-          </div>
+      <p id="featured-heading" class="section-label text-center mb-4">As featured in</p>
+      <div class="client-logos">
+        {% for testimonial in site.data.testimonials %}
+          {% if testimonial.featured %}
+            <img src="{{ testimonial.logo | relative_url }}" alt="{{ testimonial.contact_name }} affiliation" width="180" height="48">
+          {% endif %}
         {% endfor %}
       </div>
     </div>
   </section>
+
+  <section class="testimonials-section py-5 py-lg-6" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-heading text-center">
+        <p class="section-label mb-2">In their words</p>
+        <h2 id="testimonials-heading">What our readers say</h2>
+      </div>
+      <div class="testimonial-carousel" data-testimonial-carousel>
+        <div class="testimonial-track" aria-label="Reader testimonials" tabindex="0">
+          {% for testimonial in site.data.testimonials %}
+            <div class="testimonial-slide" data-testimonial="{{ testimonial.data }}" data-logo="{{ testimonial.logo | relative_url }}">
+            <figure class="testimonial h-100 mb-0">
+              <blockquote>“{{ testimonial.testimonial }}”</blockquote>
+              <figcaption><strong>{{ testimonial.contact_name }}</strong><span>{{ testimonial.affiliation }}</span></figcaption>
+            </figure>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="testimonial-controls" hidden>
+          <button class="testimonial-control" type="button" data-testimonial-previous aria-label="Previous testimonials" title="Previous testimonials">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <button class="testimonial-control" type="button" data-testimonial-next aria-label="Next testimonials" title="Next testimonials">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="latest" class="latest-posts py-5 py-lg-6" aria-labelledby="latest-heading">
+    <div class="container">
+      <div class="section-heading text-center">
+        <p class="section-label mb-2">The latest</p>
+        <h2 id="latest-heading">From the blog</h2>
+      </div>
+      <div class="post-tabs" role="tablist" aria-label="Filter blog posts by topic">
+        <button class="post-tab is-active" type="button" role="tab" aria-selected="true" data-tag="all">All posts</button>
+        <button class="post-tab" type="button" role="tab" aria-selected="false" data-tag="r">R</button>
+        <button class="post-tab" type="button" role="tab" aria-selected="false" data-tag="shiny">Shiny</button>
+        <button class="post-tab" type="button" role="tab" aria-selected="false" data-tag="shinyproxy">ShinyProxy</button>
+      </div>
+      <div id="post-grid" class="row g-4" role="tabpanel">
+        {% for post in site.posts %}
+          <div class="col-md-6 post-entry" data-tags="{{ post.tags | join: '|' | downcase }}">
+            <article class="post-card p-4 p-lg-5 h-100">
+              <div class="post-meta mb-3">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                {% if post.tags %}<span>{{ post.tags | first }}</span>{% endif %}
+              </div>
+              <h3 class="h3"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p class="text-secondary mb-4">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 28 }}</p>
+              <a class="post-read-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+      <p class="post-filter-empty text-center mt-4 mb-0" hidden>No articles in this topic yet.</p>
+      <div class="text-center mt-5">
+        <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/blog/' | relative_url }}">View all articles</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<script>
+  (function () {
+    const tabs = document.querySelectorAll('.post-tab');
+    const entries = document.querySelectorAll('.post-entry');
+    const emptyMessage = document.querySelector('.post-filter-empty');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const tag = tab.dataset.tag;
+        let visibleCount = 0;
+
+        tabs.forEach((item) => {
+          const selected = item === tab;
+          item.classList.toggle('is-active', selected);
+          item.setAttribute('aria-selected', String(selected));
+        });
+
+        entries.forEach((entry) => {
+          const visible = tag === 'all' || entry.dataset.tags.split('|').includes(tag);
+          entry.hidden = !visible;
+          visibleCount += visible ? 1 : 0;
+        });
+
+        emptyMessage.hidden = visibleCount > 0;
+      });
+    });
+  }());
+
+  (function () {
+    const carousel = document.querySelector('[data-testimonial-carousel]');
+
+    if (!carousel) {
+      return;
+    }
+
+    const track = carousel.querySelector('.testimonial-track');
+    const slides = carousel.querySelectorAll('.testimonial-slide');
+    const controls = carousel.querySelector('.testimonial-controls');
+    const previous = carousel.querySelector('[data-testimonial-previous]');
+    const next = carousel.querySelector('[data-testimonial-next]');
+
+    function updateControls() {
+      const hasOverflow = slides.length > 3 && track.scrollWidth > track.clientWidth;
+      controls.hidden = !hasOverflow;
+
+      if (hasOverflow) {
+        previous.disabled = track.scrollLeft <= 1;
+        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+      }
+    }
+
+    function scrollTestimonials(direction) {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const distance = slides[0].getBoundingClientRect().width + gap;
+      track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    }
+
+    previous.addEventListener('click', () => scrollTestimonials(-1));
+    next.addEventListener('click', () => scrollTestimonials(1));
+    track.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  }());
+</script>
