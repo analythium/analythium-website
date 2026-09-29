@@ -2,6 +2,8 @@
 layout: post
 title: Hosting Data Apps Website
 author: Peter Solymos
+thumbnail: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80
+thumbnail_alt: Abstract view of a connected globe
 tags:
   - R
   - Shiny

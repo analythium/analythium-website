@@ -1,0 +1,36 @@
+---
+layout: default
+title: Projects
+description: Recent Analythium work in data visualization, analytics, and data applications.
+permalink: /projects/
+---
+<main class="py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <p class="section-label mb-3">Projects</p>
+        <h1 class="display-5 mb-3">Recent analytics work</h1>
+        <p class="lead text-secondary mb-0">Examples of data management, visualization, and application delivery work inspired by the projects featured at Analythium.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8 blog-list">
+        {% assign projects = site.projects | sort: 'date' | reverse %}
+        {% for project in projects %}
+          <article class="post-card card-with-thumbnail">
+            <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
+              <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
+            </a>
+            <div class="card-content p-4 p-md-5">
+            <p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>
+            <h2 class="h3 mb-3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+            <p class="text-secondary mb-0">{{ project.summary }}</p>
+            <a class="btn landing-secondary-action rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>

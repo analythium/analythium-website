@@ -11,9 +11,9 @@ description: Analythium helps teams deliver data products with open source, clou
         <h1>Build data products your teams can trust.</h1>
         <p class="landing-hero-summary">Field notes, practical guides, and production patterns for R, Shiny, and cloud-native analytics.</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a class="btn btn-warning btn-lg rounded-pill px-4" href="#latest">Explore the blog</a>
-          <a class="btn landing-secondary-action btn-lg rounded-pill px-4" href="https://github.com/analythium/">Visit GitHub</a>
-          <a class="btn landing-secondary-action btn-lg rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Contact</a>
+          <a class="btn landing-secondary-action btn-lg rounded-pill px-4" href="#latest">Explore the blog</a>
+          <a class="btn landing-secondary-action btn-lg rounded-pill px-4" href="https://github.com/analythium/" target="_blank" rel="noopener noreferrer">Open Source</a>
+          <a class="btn btn-warning btn-lg rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Contact</a>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@ description: Analythium helps teams deliver data products with open source, clou
 
   <section class="featured-strip py-5" aria-labelledby="featured-heading">
     <div class="container">
-      <p id="featured-heading" class="section-label text-center mb-4">As featured in</p>
+      <p id="featured-heading" class="section-label text-center mb-4">Our clients</p>
       <div class="client-logos">
         {% for testimonial in site.data.testimonials %}
           {% if testimonial.featured %}
@@ -35,7 +35,7 @@ description: Analythium helps teams deliver data products with open source, clou
   <section class="testimonials-section py-5 py-lg-6" aria-labelledby="testimonials-heading">
     <div class="container">
       <div class="section-heading text-center">
-        <p class="section-label mb-2">In their words</p>
+        <p class="section-label mb-2">Client testimonials</p>
         <h2 id="testimonials-heading">What our readers say</h2>
       </div>
       <div class="testimonial-carousel" data-testimonial-carousel>
@@ -61,6 +61,36 @@ description: Analythium helps teams deliver data products with open source, clou
     </div>
   </section>
 
+  <section class="recent-projects py-5 py-lg-6" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-heading text-center">
+        <p class="section-label mb-2">Recent work</p>
+        <h2 id="projects-heading">Projects that make data useful</h2>
+      </div>
+      <div class="row g-4">
+        {% assign recent_projects = site.projects | sort: 'date' | reverse | slice: 0, 4 %}
+        {% for project in recent_projects %}
+          <div class="col-md-6">
+            <article class="post-card card-with-thumbnail h-100">
+              <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
+                <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
+              </a>
+              <div class="card-content p-4 p-lg-5">
+              <p class="post-meta mb-3">{{ project.date | date: "%B %Y" }}</p>
+              <h3 class="h3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+              <p class="text-secondary mb-4">{{ project.summary }}</p>
+              <a class="post-read-link" href="{{ project.url | relative_url }}">View project <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="text-center mt-5">
+        <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/projects/' | relative_url }}">View all projects</a>
+      </div>
+    </div>
+  </section>
+
   <section id="latest" class="latest-posts py-5 py-lg-6" aria-labelledby="latest-heading">
     <div class="container">
       <div class="section-heading text-center">
@@ -76,7 +106,11 @@ description: Analythium helps teams deliver data products with open source, clou
       <div id="post-grid" class="row g-4" role="tabpanel">
         {% for post in site.posts %}
           <div class="col-md-6 post-entry" data-tags="{{ post.tags | join: '|' | downcase }}">
-            <article class="post-card p-4 p-lg-5 h-100">
+            <article class="post-card card-with-thumbnail h-100">
+              <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+                <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
+              </a>
+              <div class="card-content p-4 p-lg-5">
               <div class="post-meta mb-3">
                 <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                 {% if post.tags %}<span>{{ post.tags | first }}</span>{% endif %}
@@ -84,6 +118,7 @@ description: Analythium helps teams deliver data products with open source, clou
               <h3 class="h3"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
               <p class="text-secondary mb-4">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 28 }}</p>
               <a class="post-read-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">→</span></a>
+              </div>
             </article>
           </div>
         {% endfor %}

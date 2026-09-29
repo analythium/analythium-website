@@ -4,8 +4,8 @@
   --site-panel-soft: #1f2431;
   --site-text: #f8f9fa;
   --site-muted: #adb5bd;
-  --site-accent: #ba68c8;
-  --site-accent-dark: #7b1fa2;
+  --site-accent: #ffd54f;
+  --site-accent-dark: #c99b00;
   --site-gold: #ffd54f;
   --site-link-hover: #ffe082;
   --site-border: rgba(255, 255, 255, 0.08);
@@ -23,8 +23,8 @@
   --site-panel-soft: #eef1f7;
   --site-text: #1c2434;
   --site-muted: #5f6b7d;
-  --site-accent: #8d2da4;
-  --site-accent-dark: #651b78;
+  --site-accent: #9a6200;
+  --site-accent-dark: #704600;
   --site-gold: #9a6200;
   --site-link-hover: #704600;
   --site-border: rgba(28, 36, 52, 0.13);
@@ -405,6 +405,36 @@ a:focus {
   flex-direction: column;
 }
 
+.card-with-thumbnail {
+  display: grid;
+  grid-template-columns: minmax(9rem, 32%) minmax(0, 1fr);
+  overflow: hidden;
+  padding: 0;
+}
+
+.card-thumbnail {
+  display: block;
+  min-height: 100%;
+  background: var(--site-panel-soft);
+}
+
+.card-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.recent-projects {
+  border-bottom: 1px solid var(--site-border);
+}
+
 .post-card h3 {
   font-weight: 700;
 }
@@ -536,6 +566,14 @@ a:focus {
 }
 
 @media (max-width: 575.98px) {
+  .card-with-thumbnail {
+    grid-template-columns: 1fr;
+  }
+
+  .card-thumbnail {
+    height: 12rem;
+  }
+
   .about-section .row {
     margin-right: 0;
     margin-left: 0;

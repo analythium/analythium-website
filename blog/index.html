@@ -17,11 +17,16 @@ permalink: /blog/
     <div class="row justify-content-center">
       <div class="col-lg-8 blog-list">
         {% for post in site.posts %}
-          <article class="post-card p-4 p-md-5">
+          <article class="post-card card-with-thumbnail">
+            <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+              <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
+            </a>
+            <div class="card-content p-4 p-md-5">
             <p class="text-secondary mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
             <h2 class="h3 mb-3"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
             <p class="text-secondary mb-0">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 40 }}</p>
             <a class="btn btn-outline-light rounded-pill px-4 mt-4" href="{{ post.url | relative_url }}">Read post</a>
+            </div>
           </article>
         {% endfor %}
       </div>

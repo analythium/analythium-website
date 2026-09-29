@@ -11,13 +11,14 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
         <li class="nav-item"><a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
         <li class="nav-item"><a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url contains '/projects/' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a></li>
         <li class="nav-item"><a class="nav-link{% if page.url contains '/blog/' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a></li>
         <li class="nav-item ms-lg-3">
           <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
             <span class="theme-toggle-icon" aria-hidden="true"></span>
           </button>
         </li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-warning rounded-pill px-4" href="{{ '/blog/' | relative_url }}">Read the blog</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-warning rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Contact</a></li>
       </ul>
     </div>
   </div>
