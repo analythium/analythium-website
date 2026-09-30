@@ -19,7 +19,7 @@ permalink: /blog/
         {% for post in site.posts %}
           <article class="post-card card-with-thumbnail">
             <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-              <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
+              <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
             </a>
             <div class="card-content p-4 p-md-5">
             <p class="text-secondary mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
