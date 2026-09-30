@@ -8,15 +8,6 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: <!--truncate-->
 timezone: UTC
-plugins:
-  - jekyll-paginate-v2
-pagination:
-  enabled: true
-  collection: posts
-  per_page: 6
-  permalink: /page:num/
-  sort_field: date
-  sort_reverse: true
 collections:
   projects:
     output: true

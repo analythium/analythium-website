@@ -107,7 +107,7 @@ description: Analythium helps teams deliver data products with open source, clou
           <div class="col-md-6 post-entry" data-tags="{{ post.tags | join: '|' | downcase }}">
             <article class="post-card card-with-thumbnail h-100">
               <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-                <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
+                <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
               </a>
               <div class="card-content p-4 p-lg-5">
               <div class="post-meta mb-3">
