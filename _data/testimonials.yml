@@ -1,41 +1,37 @@
-- contact_name: Hannah Reed
-  affiliation: Data Platform Lead
-  testimonial: The guides make otherwise complicated infrastructure decisions feel clear and actionable. It has become essential reading for our team.
-  data: hannah-reed
-  logo: /assets/images/clients/atlas-data.svg
+- contact_name: Maya Mathur
+  affiliation: Associate Director, Center for Open and Reproducible Science, Stanford University
+  testimonial: Efficiently developed a user-friendly, and open-source workflow that fit my needs exactly. Even added clever features, like the ability to selectively deploy certain apps by commit messages. I would definitely hire them again!
+  data: maya-mathur
   featured: yes
 
-- contact_name: Matteo Costa
-  affiliation: Analytics Engineer
-  testimonial: A rare mix of technical depth and real-world restraint. Every article gives us something practical to try in our next release.
-  data: matteo-costa
-  logo: /assets/images/clients/meridian.svg
+- contact_name: Tyler Muhly
+  affiliation: Acting Team Lead, Strategic Analysis, Forest Analysis and Inventory Branch, Government of British Columbia
+  testimonial: Thank you to the Analythium team for introducing us to cloud computing. They provided high quality and thorough communication and helped us find a system that meets our needs.
+  data: tyler-muhly
   featured: yes
 
-- contact_name: Priya Shah
-  affiliation: Head of Data Science
-  testimonial: The Shiny and deployment coverage saves hours of research. It is concise, opinionated, and consistently useful.
-  data: priya-shah
-  logo: /assets/images/clients/northline.svg
+- contact_name: Sophie Czetwertynski
+  affiliation: Ungulate Biologist, Fish and Wildlife Branch, Yukon Department of Environment
+  testimonial: >-
+    Dr. Peter Solymos has been contracted for various projects for the Yukon government over the past 10 years and every deliverable has exceeded expectations. He is exceptional at taking complex statistical concepts and making them accessible to biologist by creating interfaces that are efficient in the field yet flexible enough for post-survey modeling. Thanks to his work, the Yukon Moose Program has a field software that allows Regional Biologist to easily integrate multiple sources of data to optimally sample a landscape by helicopter and estimate moose population abundance and composition. His work has increased the Yukon's capacity to conduct moose surveys and we are extremely thankful for his skills. Overall, Dr. Solymos is a pleasure to work with, has endless patience towards the less statistically-inclined, and I would not hesitate to recommend him for any statistical and/or programming project.
+  data: sophie-czetwertynski
   featured: yes
 
-- contact_name: Elias Morgan
-  affiliation: Product Analytics Manager
-  testimonial: The deployment articles give our analysts a shared language for making data applications more reliable and easier to operate.
-  data: elias-morgan
-  logo: /assets/images/clients/orbit.svg
+- contact_name: Brian Tran
+  affiliation: Co-founder and CTO, TRAK Data Inc.
+  testimonial: Working with Analythium has been a great experience. If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
+  data: brian-tran
   featured: no
 
-- contact_name: Sofia Nguyen
-  affiliation: Director of Research
-  testimonial: It is the most grounded source we have found for connecting open source choices to the needs of a growing data team.
-  data: sofia-nguyen
-  logo: /assets/images/clients/verge.svg
+- contact_name: Dwight Kuo
+  affiliation: Sr. Director, Bioinformatics, Alamar Biosciences
+  testimonial: >-
+    At Alamar Biosciences, we built NULISA Analysis Software, a solution to empower our customers with scalable proteomic analysis capabilities, but lacked the experience needed to build out the required infrastructure to support this. Analythium provided the know-how to build our software on top of a cloud-based infrastructure on Microsoft Azure, leveraging ShinyProxy and Kubernetes. Now, our customers can access our analysis solution with unparalleled ease and scalability. Moreover, Analythium's assistance in enhancing the UI of our Shiny application has streamlined our workflows and improved user satisfaction. We highly recommend Analythium for their innovative solutions and exceptional service.
+  data: dwight-kuo
   featured: no
 
-- contact_name: Daniel Okafor
-  affiliation: Solutions Architect
-  testimonial: Each post cuts through implementation noise and helps us focus on the engineering decisions that matter in production.
-  data: daniel-okafor
-  logo: /assets/images/clients/atlas-data.svg
+- contact_name: Emily Riederer
+  affiliation: Capital One
+  testimonial: A phenomenal set of articles and tools - these are can't-miss.
+  data: emily-riederer
   featured: no

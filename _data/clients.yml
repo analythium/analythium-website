@@ -1,0 +1,84 @@
+- name: Fort McKay Metis Nation
+  logo_path: /assets/images/clients/fmmn.png
+  url: https://fortmckaymetis.com/
+  featured: yes
+
+- name: Lactanet
+  logo_path: /assets/images/clients/lactanet.jpg
+  url: https://lactanet.ca/en/
+  featured: no
+
+- name: Environment and Climate Change Canada
+  logo_path: /assets/images/clients/eccc.svg
+  url: https://www.canada.ca/en/environment-climate-change.html
+  featured: yes
+
+- name: Biodiversity Pathways
+  logo_path: /assets/images/clients/bio-path.jpg
+  url: https://biodiversitypathways.ca/
+  featured: no
+
+- name: Alberta Biodiversity Monitoring Institute
+  logo_path: /assets/images/clients/abmi.jpg
+  url: https://abmi.ca/abmi-home
+  featured: yes
+
+- name: TRAK Data / Fusion92
+  logo_path: /assets/images/clients/fusion92.png
+  url: https://www.fusion92.com/
+  featured: no
+
+- name: Ketchbrook Analytics
+  logo_path: /assets/images/clients/ketchbrook.jpg
+  url: https://ketchbrookanalytics.com/
+  featured: yes
+
+- name: Natural Resources Canada, Canadian Forest Service
+  logo_path: /assets/images/clients/nrcan-cfs.svg
+  url: https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service
+  featured: no
+
+- name: Government of Yukon
+  logo_path: /assets/images/clients/gov-yukon.png
+  url: https://yukon.ca/
+  featured: no
+
+- name: Government of British Columbia
+  logo_path: /assets/images/clients/gov-bc.png
+  url: https://www2.gov.bc.ca/gov/content/home
+  featured: yes
+
+- name: FastR&D LLC
+  logo_path: /assets/images/clients/fastrnd.png
+  url: https://www.fastrnd.com/
+  featured: no
+
+- name: Campbell & Company
+  logo_path: /assets/images/clients/campbell-company.svg
+  url: https://www.campbellcompany.com/
+  featured: yes
+
+- name: ZevRoss Spatial Analysis
+  logo_path: /assets/images/clients/zevross.png
+  url: https://www.zevross.com/
+  featured: no
+
+- name: Stanford University School of Medicine
+  logo_path: /assets/images/clients/stanford-medicine.png
+  url: https://med.stanford.edu/
+  featured: yes
+
+- name: University of Alberta
+  logo_path: /assets/images/clients/university-alberta.png
+  url: https://www.ualberta.ca/
+  featured: no
+
+- name: Alamar Biosciences
+  logo_path: /assets/images/clients/alamar-biosciences.png
+  url: https://alamarbio.com/
+  featured: yes
+
+- name: AttaliTech
+  logo_path: /assets/images/clients/attalitech.png
+  url: https://attalitech.com/
+  featured: no

@@ -27,9 +27,11 @@ description: Analythium helps teams deliver data products with open source, clou
       </div>
       <div class="featured-strip testimonials-featured">
         <div class="client-logos">
-          {% for testimonial in site.data.testimonials %}
-            {% if testimonial.featured %}
-              <img src="{{ testimonial.logo | relative_url }}" alt="{{ testimonial.contact_name }} affiliation" width="180" height="48">
+          {% for client in site.data.clients %}
+            {% if client.featured %}
+              <a href="{{ client.url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ client.logo_path | relative_url }}" alt="{{ client.name }} logo" width="180" height="48" loading="lazy">
+              </a>
             {% endif %}
           {% endfor %}
         </div>
@@ -37,7 +39,7 @@ description: Analythium helps teams deliver data products with open source, clou
       <div class="testimonial-carousel" data-testimonial-carousel>
         <div class="testimonial-track" aria-label="Reader testimonials" tabindex="0">
           {% for testimonial in site.data.testimonials %}
-            <div class="testimonial-slide" data-testimonial="{{ testimonial.data }}" data-logo="{{ testimonial.logo | relative_url }}">
+            <div class="testimonial-slide" data-testimonial="{{ testimonial.data }}">
             <figure class="testimonial h-100 mb-0">
               <blockquote>“{{ testimonial.testimonial }}”</blockquote>
               <figcaption><strong>{{ testimonial.contact_name }}</strong><span>{{ testimonial.affiliation }}</span></figcaption>
