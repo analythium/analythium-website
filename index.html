@@ -102,7 +102,7 @@ description: Analythium helps teams deliver data products with open source, clou
         <button class="post-tab" type="button" role="tab" aria-selected="false" data-tag="shinyproxy">ShinyProxy</button>
       </div>
       <div id="post-grid" class="row g-4" role="tabpanel">
-        {% for post in site.posts %}
+        {% for post in site.posts limit: 4 %}
           <div class="col-md-6 post-entry" data-tags="{{ post.tags | join: '|' | downcase }}">
             <article class="post-card card-with-thumbnail h-100">
               <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Topics
+description: Browse Analythium articles by topic.
+permalink: /tags/
+---
+<main class="py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <p class="section-label mb-3">Topics</p>
+        <h1 class="display-5 mb-3">Browse the blog by topic</h1>
+        <p class="lead text-secondary mb-0">Explore articles grouped by the ideas, tools, and fields they cover.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+          {% assign tag_name = tag[0] %}
+          {% assign tag_posts = tag[1] %}
+          <section class="post-card p-4 p-md-5 mb-4" aria-labelledby="tag-{{ tag_name | slugify }}">
+            <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2 mb-3">
+              <h2 id="tag-{{ tag_name | slugify }}" class="h3 mb-0">{{ tag_name }}</h2>
+              <span class="text-secondary small">{{ tag_posts | size }} {% if tag_posts.size == 1 %}article{% else %}articles{% endif %}</span>
+            </div>
+            <ul class="list-unstyled mb-0 d-grid gap-2">
+              {% for post in tag_posts %}
+                <li><a class="post-read-link" href="{{ post.url | relative_url }}">{{ post.title }} <span aria-hidden="true">&rarr;</span></a></li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>

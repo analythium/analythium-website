@@ -3,6 +3,8 @@ layout: default
 title: Blog
 description: Migrated blog posts from the Analythium Hub and blog site.
 permalink: /blog/
+pagination:
+  enabled: true
 ---
 <main class="py-5">
   <div class="container">
@@ -16,7 +18,7 @@ permalink: /blog/
 
     <div class="row justify-content-center">
       <div class="col-lg-8 blog-list">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
           <article class="post-card card-with-thumbnail">
             <a class="card-thumbnail" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
               <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.thumbnail_alt }}" loading="lazy">
@@ -31,5 +33,16 @@ permalink: /blog/
         {% endfor %}
       </div>
     </div>
+    {% if paginator.total_pages > 1 %}
+      <nav class="d-flex justify-content-center align-items-center gap-3 mt-5" aria-label="Blog pagination">
+        {% if paginator.previous_page %}
+          <a class="btn landing-secondary-action rounded-pill px-4" href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+        {% endif %}
+        <span class="text-secondary">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a class="btn landing-secondary-action rounded-pill px-4" href="{{ paginator.next_page_path | relative_url }}">Next</a>
+        {% endif %}
+      </nav>
+    {% endif %}
   </div>
 </main>
