@@ -136,7 +136,8 @@ a:focus {
 }
 
 .navbar-brand,
-.navbar-nav .nav-link {
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
   color: var(--site-text);
 }
 
@@ -148,6 +149,34 @@ a:focus {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link.active {
+  color: var(--site-gold);
+}
+
+.navbar-nav .dropdown-toggle {
+  border: 0;
+  background: transparent;
+}
+
+.navbar-nav .dropdown-toggle:hover,
+.navbar-nav .dropdown-toggle:focus,
+.navbar-nav .dropdown-toggle.active {
+  color: var(--site-gold);
+}
+
+.dropdown-menu {
+  border-color: var(--site-border);
+  background: var(--site-panel);
+  box-shadow: 0 0.75rem 2rem var(--site-shadow);
+}
+
+.dropdown-item {
+  color: var(--site-text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background: var(--site-panel-soft);
   color: var(--site-gold);
 }
 
@@ -696,6 +725,27 @@ a:focus {
 .about-collaboration-inner {
   max-width: 44rem;
   margin: 0 auto;
+}
+
+.service-cta-well {
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid var(--site-border);
+  border-radius: 0.5rem;
+  background: var(--site-panel);
+  box-shadow: 0 1rem 3rem var(--site-shadow);
+}
+
+.service-cta-well .landing-secondary-action {
+  border-color: var(--site-accent);
+  background: var(--site-accent);
+  color: #000;
+}
+
+.service-cta-well .landing-secondary-action:hover,
+.service-cta-well .landing-secondary-action:focus-visible {
+  border-color: var(--site-gold);
+  background: var(--site-gold);
+  color: #000;
 }
 
 .about-collaboration h2 {
