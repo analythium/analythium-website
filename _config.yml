@@ -18,4 +18,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  apps:
+    output: true
+    permalink: /apps/:name/
 fathom_site_id: TSIFRZZM
