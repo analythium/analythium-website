@@ -1,21 +1,22 @@
-<form class="contact-form" method="post" action="{{ '/contact/' | relative_url }}">
+<form class="contact-form" method="post" action="https://forms.reform.app/headless/analythium/contact/FB5Iji/submissions">
   <div class="row g-4">
     <div class="col-md-6">
-      <label class="form-label" for="contact-name">Name</label>
-      <input id="contact-name" class="form-control" type="text" name="name" autocomplete="name" required>
+      <label class="form-label" for="blk_name_iuxbxgukbo">What's your name?</label>
+      <input id="blk_name_iuxbxgukbo" class="form-control" type="text" name="answers[blk_name_iuxbxgukbo]" placeholder="Jane Smith" autocomplete="name" required>
     </div>
     <div class="col-md-6">
-      <label class="form-label" for="contact-email">Email</label>
-      <input id="contact-email" class="form-control" type="email" name="email" autocomplete="email" required>
+      <label class="form-label" for="blk_email_20jm2mpxyh">What's your work email?</label>
+      <input id="blk_email_20jm2mpxyh" class="form-control" type="email" name="answers[blk_email_20jm2mpxyh]" placeholder="jane@business.com" autocomplete="email" required>
     </div>
     <div class="col-12">
-      <label class="form-label" for="contact-company">Company</label>
-      <input id="contact-company" class="form-control" type="text" name="company" autocomplete="organization">
+      <label class="form-label" for="blk_text_jysixnfcev">What's the name of your company?</label>
+      <input id="blk_text_jysixnfcev" class="form-control" type="text" name="answers[blk_text_jysixnfcev]" placeholder="Acme Inc." autocomplete="organization" required>
     </div>
     <div class="col-12">
-      <label class="form-label" for="contact-message">Message</label>
-      <textarea id="contact-message" class="form-control" name="message" rows="6" required></textarea>
+      <label class="form-label" for="blk_text_aohgu4o2zu">Anything you want to share about your plans with us?</label>
+      <textarea id="blk_text_aohgu4o2zu" class="form-control" name="answers[blk_text_aohgu4o2zu]" placeholder="Message" rows="6" required></textarea>
     </div>
+    <input id="blk_hidden_lsrdmik1dk" type="hidden" name="answers[blk_hidden_lsrdmik1dk]" value="website">
     <div class="col-12">
       <button class="btn btn-warning rounded-pill px-4" type="submit">Send message</button>
     </div>
