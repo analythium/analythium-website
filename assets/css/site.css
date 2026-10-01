@@ -44,6 +44,56 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.site-announcement {
+  background: #e8c978;
+  color: #3d2d00;
+}
+
+.site-announcement-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.site-announcement a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+.site-announcement-close {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  transform: translateY(-50%);
+}
+
+.site-announcement-close:hover,
+.site-announcement-close:focus-visible {
+  background: rgba(61, 45, 0, 0.12);
+}
+
+.site-announcement-close svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
 a {
   color: var(--site-gold);
 }

@@ -17,6 +17,21 @@
     </script>
   </head>
   <body>
+    {% if site.announcement.enabled and site.announcement.text %}
+      <aside class="site-announcement" data-announcement data-announcement-id="{{ site.announcement.id | default: 'site-announcement' }}" aria-label="Site announcement">
+        <div class="container site-announcement-content">
+          <p class="mb-0">
+            {{ site.announcement.text }}
+            {% if site.announcement.link_text and site.announcement.link_url %}
+              <a href="{{ site.announcement.link_url | relative_url }}">{{ site.announcement.link_text }}</a>
+            {% endif %}
+          </p>
+          <button class="site-announcement-close" type="button" data-announcement-close aria-label="Dismiss announcement" title="Dismiss announcement">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </aside>
+    {% endif %}
     {% include header.html %}
 
     {{ content }}
@@ -43,6 +58,36 @@
         updateTheme(root.dataset.theme);
         themeToggle.addEventListener('click', () => {
           updateTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+        });
+      }());
+    </script>
+    <script>
+      (function () {
+        const announcement = document.querySelector('[data-announcement]');
+
+        if (!announcement) {
+          return;
+        }
+
+        const storageKey = `announcement-dismissed:${announcement.dataset.announcementId}`;
+
+        try {
+          if (localStorage.getItem(storageKey) === 'true') {
+            announcement.hidden = true;
+            return;
+          }
+        } catch (error) {
+          // Continue showing the announcement when local storage is unavailable.
+        }
+
+        announcement.querySelector('[data-announcement-close]').addEventListener('click', () => {
+          announcement.hidden = true;
+
+          try {
+            localStorage.setItem(storageKey, 'true');
+          } catch (error) {
+            // Dismissal still applies for the current page when local storage is unavailable.
+          }
         });
       }());
     </script>

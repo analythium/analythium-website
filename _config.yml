@@ -8,6 +8,12 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: <!--truncate-->
 timezone: UTC
+announcement:
+  enabled: true
+  id: site-announcement-1
+  text: Explore our latest work, guides, and open source projects.
+  link_text: Read the blog
+  link_url: /blog/
 collections:
   projects:
     output: true
