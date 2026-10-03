@@ -1,84 +1,132 @@
 - name: Fort McKay Metis Nation
+  data: fmmn
   logo_path: /assets/images/clients/fmmn.png
   url: https://fortmckaymetis.com/
   featured: yes
+  services: ["data-science", "engineering", "training"]
 
 - name: Lactanet
+  data: lactanet
   logo_path: /assets/images/clients/lactanet.jpg
   url: https://lactanet.ca/en/
   featured: no
+  services: ["engineering", "training"]
 
 - name: Environment and Climate Change Canada
+  data: eccc
   logo_path: /assets/images/clients/eccc.svg
   url: https://www.canada.ca/en/environment-climate-change.html
   featured: yes
+  services: ["data-science", "engineering"]
 
 - name: Biodiversity Pathways
+  data: biopat
   logo_path: /assets/images/clients/bio-path.jpg
   url: https://biodiversitypathways.ca/
   featured: no
+  services: ["data-science", "engineering"]
 
 - name: Alberta Biodiversity Monitoring Institute
+  data: abmi
   logo_path: /assets/images/clients/abmi.jpg
   url: https://abmi.ca/abmi-home
-  featured: yes
+  featured: no
+  services: ["data-science", "engineering"]
 
-- name: TRAK Data / Fusion92
+- name: Fusion92
+  data: fusion92
   logo_path: /assets/images/clients/fusion92.png
   url: https://www.fusion92.com/
   featured: no
+  services: ["engineering"]
 
 - name: Ketchbrook Analytics
+  data: ketchbrook
   logo_path: /assets/images/clients/ketchbrook.jpg
   url: https://ketchbrookanalytics.com/
-  featured: yes
+  featured: no
+  services: ["data-science", "engineering", "training"]
 
-- name: Natural Resources Canada, Canadian Forest Service
+- name: Canadian Forest Service
+  data: cfs
   logo_path: /assets/images/clients/nrcan-cfs.svg
   url: https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service
   featured: no
+  services: ["engineering"]
 
-- name: Government of Yukon
+- name: Yukon Government
+  data: yukon-gov
   logo_path: /assets/images/clients/gov-yukon.png
   url: https://yukon.ca/
-  featured: no
+  featured: yes
+  services: ["data-science", "engineering", "training"]
 
 - name: Government of British Columbia
+  data: bc-gov
   logo_path: /assets/images/clients/gov-bc.png
   url: https://www2.gov.bc.ca/gov/content/home
   featured: yes
+  services: ["data-science", "engineering", "training"]
 
 - name: FastR&D LLC
+  data: fastrnd
   logo_path: /assets/images/clients/fastrnd.png
   url: https://www.fastrnd.com/
   featured: no
+  services: ["engineering", "training"]
 
 - name: Campbell & Company
+  data: campbell-co
   logo_path: /assets/images/clients/campbell-company.svg
   url: https://www.campbellcompany.com/
-  featured: yes
+  featured: no
+  services: ["engineering"]
 
 - name: ZevRoss Spatial Analysis
+  data: zevross
   logo_path: /assets/images/clients/zevross.png
   url: https://www.zevross.com/
   featured: no
+  services: ["engineering", "training"]
 
 - name: Stanford University School of Medicine
+  data: stanford
   logo_path: /assets/images/clients/stanford-medicine.png
   url: https://med.stanford.edu/
   featured: yes
+  services: ["data-science", "engineering", "training"]
 
 - name: University of Alberta
+  data: uofa
   logo_path: /assets/images/clients/university-alberta.png
   url: https://www.ualberta.ca/
-  featured: no
+  featured: yes
+  services: ["data-science", "engineering", "training"]
 
 - name: Alamar Biosciences
+  data: alamar
   logo_path: /assets/images/clients/alamar-biosciences.png
   url: https://alamarbio.com/
   featured: yes
+  services: ["data-science", "engineering"]
 
 - name: AttaliTech
+  data: attalitech
   logo_path: /assets/images/clients/attalitech.png
   url: https://attalitech.com/
   featured: no
+  services: ["data-science", "engineering", "training"]
+
+- name: Statistical Society of Canada
+  data: ssc
+  logo_path: /assets/images/clients/ssc.png
+  url: https://ssc.ca/en
+  featured: yes
+  services: ["training"]
+
+# - name: Clinical Biostatistical Society of Hungary
+#   data: biostat-hu
+#   logo_path: /assets/images/clients/cbsh.png
+#   url: https://www.biostat.hu/
+#   featured: no
+#   services: ["training"]
