@@ -10,11 +10,11 @@
     <div class="collapse navbar-collapse" id="site-nav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle{% if page.url == '/data-science/' or page.url == '/engineering/' or page.url == '/training/' %} active{% endif %}" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</button>
+          <button class="nav-link dropdown-toggle{% if page.url contains '/services/' %} active{% endif %}" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item{% if page.url == '/data-science/' %} active{% endif %}" href="{{ '/data-science/' | relative_url }}">Data science</a></li>
-            <li><a class="dropdown-item{% if page.url == '/engineering/' %} active{% endif %}" href="{{ '/engineering/' | relative_url }}">Engineering</a></li>
-            <li><a class="dropdown-item{% if page.url == '/training/' %} active{% endif %}" href="{{ '/training/' | relative_url }}">Training</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/data-science/' %} active{% endif %}" href="{{ '/services/data-science/' | relative_url }}">Data science</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/engineering/' %} active{% endif %}" href="{{ '/services/engineering/' | relative_url }}">Engineering</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/training/' %} active{% endif %}" href="{{ '/services/training/' | relative_url }}">Training</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link{% if page.url contains '/projects/' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a></li>

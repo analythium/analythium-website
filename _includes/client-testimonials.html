@@ -1,0 +1,109 @@
+{% assign requested_services = page.services %}
+<section class="testimonials-section py-5 py-lg-6" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-heading text-center">
+      <p class="section-label mb-2">Client testimonials</p>
+      <h2 id="testimonials-heading" class="visually-hidden">What our clients say</h2>
+    </div>
+    <div class="featured-strip testimonials-featured">
+      <div class="client-logos">
+        {% for client in site.data.clients %}
+          {% assign include_client = false %}
+          {% if requested_services == nil or requested_services == empty %}
+            {% if client.featured %}
+              {% assign include_client = true %}
+            {% endif %}
+          {% else %}
+            {% for service in requested_services %}
+              {% if client.services contains service %}
+                {% assign include_client = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if include_client %}
+            <a href="{{ client.url | escape }}" target="_blank" rel="noopener noreferrer" data-client="{{ client.data | escape }}">
+              <img src="{{ client.logo_path | relative_url }}" alt="{{ client.name | escape }} logo" width="180" height="48" loading="lazy">
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="testimonial-carousel" data-testimonial-carousel>
+      <div class="testimonial-track" aria-label="Client testimonials" tabindex="0">
+        {% for testimonial in site.data.testimonials %}
+          {% assign include_testimonial = false %}
+          {% if requested_services == nil or requested_services == empty %}
+            {% if testimonial.featured %}
+              {% assign include_testimonial = true %}
+            {% endif %}
+          {% else %}
+            {% for service in requested_services %}
+              {% if testimonial.services contains service %}
+                {% assign include_testimonial = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if include_testimonial %}
+            <div class="testimonial-slide" data-testimonial="{{ testimonial.data | escape }}">
+              <figure class="testimonial h-100 mb-0">
+                <blockquote>“{{ testimonial.testimonial | escape }}”</blockquote>
+                <figcaption><strong>{{ testimonial.contact_name | escape }}</strong><span>{{ testimonial.affiliation | escape }}</span></figcaption>
+              </figure>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="testimonial-controls" hidden>
+        <button class="testimonial-control" type="button" data-testimonial-previous aria-label="Previous testimonials" title="Previous testimonials">
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <button class="testimonial-control" type="button" data-testimonial-next aria-label="Next testimonials" title="Next testimonials">
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const carousel = document.querySelector('[data-testimonial-carousel]');
+
+    if (!carousel) {
+      return;
+    }
+
+    const track = carousel.querySelector('.testimonial-track');
+    const slides = carousel.querySelectorAll('.testimonial-slide');
+    const controls = carousel.querySelector('.testimonial-controls');
+    const previous = carousel.querySelector('[data-testimonial-previous]');
+    const next = carousel.querySelector('[data-testimonial-next]');
+
+    function updateControls() {
+      const hasOverflow = slides.length > 3 && track.scrollWidth > track.clientWidth;
+      controls.hidden = !hasOverflow;
+    }
+
+    function scrollTestimonials(direction) {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const distance = slides[0].getBoundingClientRect().width + gap;
+      const edgeThreshold = 8;
+      const atStart = track.scrollLeft <= edgeThreshold;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - edgeThreshold;
+
+      if (direction > 0 && atEnd) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else if (direction < 0 && atStart) {
+        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+      }
+    }
+
+    previous.addEventListener('click', () => scrollTestimonials(-1));
+    next.addEventListener('click', () => scrollTestimonials(1));
+    track.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  }());
+</script>
