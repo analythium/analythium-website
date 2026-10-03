@@ -28,7 +28,7 @@
 
 - contact_name: Brian Tran
   affiliation: Co-founder and CTO, TRAK Data Inc. (Fusion92)
-  testimonial: Working with Analythium has been a great experience. If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
+  testimonial: If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
   full_testimonial: Working with Analythium has been a great experience. If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
   data: brian-tran
   client: fusion92
@@ -38,7 +38,7 @@
 - contact_name: Dwight Kuo
   affiliation: Sr. Director, Bioinformatics, Alamar Biosciences
   testimonial: >-
-    Analythium provided the know-how to build our software on top of a cloud-based infrastructure. Now, our customers can access our analysis solution with unparalleled ease and scalability. Their assistance in enhancing the UI of our Shiny application has streamlined our workflows and improved user satisfaction. We highly recommend Analythium for their innovative solutions and exceptional service.
+    Analythium provided the know-how to build our software on top of a cloud-based infrastructure to access our analysis solution with unparalleled scalability. We highly recommend Analythium for their innovative solutions and exceptional service.
   full_testimonial: >-
     At Alamar Biosciences, we built NULISA Analysis Software, a solution to empower our customers with scalable proteomic analysis capabilities, but lacked the experience needed to build out the required infrastructure to support this. Analythium provided the know-how to build our software on top of a cloud-based infrastructure on Microsoft Azure, leveraging ShinyProxy and Kubernetes. Now, our customers can access our analysis solution with unparalleled ease and scalability. Moreover, Analythium's assistance in enhancing the UI of our Shiny application has streamlined our workflows and improved user satisfaction. We highly recommend Analythium for their innovative solutions and exceptional service.
   data: dwight-kuo
