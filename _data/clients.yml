@@ -3,14 +3,14 @@
   logo_path: /assets/images/clients/fmmn.png
   url: https://fortmckaymetis.com/
   featured: yes
-  services: ["data-science", "engineering", "training"]
+  services: ["data-science", "engineering"]
 
 - name: Lactanet
   data: lactanet
   logo_path: /assets/images/clients/lactanet.jpg
   url: https://lactanet.ca/en/
   featured: no
-  services: ["engineering", "training"]
+  services: ["engineering"]
 
 - name: Environment and Climate Change Canada
   data: eccc
@@ -24,14 +24,14 @@
   logo_path: /assets/images/clients/bio-path.jpg
   url: https://biodiversitypathways.ca/
   featured: no
-  services: ["data-science", "engineering"]
+  services: ["data-science"]
 
 - name: Alberta Biodiversity Monitoring Institute
   data: abmi
   logo_path: /assets/images/clients/abmi.jpg
   url: https://abmi.ca/abmi-home
   featured: no
-  services: ["data-science", "engineering"]
+  services: ["engineering"]
 
 - name: Fusion92
   data: fusion92
@@ -45,7 +45,7 @@
   logo_path: /assets/images/clients/ketchbrook.jpg
   url: https://ketchbrookanalytics.com/
   featured: no
-  services: ["data-science", "engineering", "training"]
+  services: ["data-science", "engineering"]
 
 - name: Canadian Forest Service
   data: cfs
@@ -66,28 +66,28 @@
   logo_path: /assets/images/clients/gov-bc.png
   url: https://www2.gov.bc.ca/gov/content/home
   featured: yes
-  services: ["data-science", "engineering", "training"]
-
-- name: FastR&D LLC
-  data: fastrnd
-  logo_path: /assets/images/clients/fastrnd.png
-  url: https://www.fastrnd.com/
-  featured: no
   services: ["engineering", "training"]
 
-- name: Campbell & Company
-  data: campbell-co
-  logo_path: /assets/images/clients/campbell-company.svg
-  url: https://www.campbellcompany.com/
-  featured: no
-  services: ["engineering"]
+# - name: FastR&D LLC
+#   data: fastrnd
+#   logo_path: /assets/images/clients/fastrnd.png
+#   url: https://www.fastrnd.com/
+#   featured: no
+#   services: ["engineering", "training"]
 
-- name: ZevRoss Spatial Analysis
-  data: zevross
-  logo_path: /assets/images/clients/zevross.png
-  url: https://www.zevross.com/
-  featured: no
-  services: ["engineering", "training"]
+# - name: Campbell & Company
+#   data: campbell-co
+#   logo_path: /assets/images/clients/campbell-company.svg
+#   url: https://www.campbellcompany.com/
+#   featured: no
+#   services: ["engineering"]
+
+# - name: ZevRoss Spatial Analysis
+#   data: zevross
+#   logo_path: /assets/images/clients/zevross.png
+#   url: https://www.zevross.com/
+#   featured: no
+#   services: ["engineering", "training"]
 
 - name: Stanford University School of Medicine
   data: stanford
@@ -110,12 +110,12 @@
   featured: yes
   services: ["data-science", "engineering"]
 
-- name: AttaliTech
-  data: attalitech
-  logo_path: /assets/images/clients/attalitech.png
-  url: https://attalitech.com/
-  featured: no
-  services: ["data-science", "engineering", "training"]
+# - name: AttaliTech
+#   data: attalitech
+#   logo_path: /assets/images/clients/attalitech.png
+#   url: https://attalitech.com/
+#   featured: no
+#   services: ["data-science", "engineering", "training"]
 
 - name: Statistical Society of Canada
   data: ssc
