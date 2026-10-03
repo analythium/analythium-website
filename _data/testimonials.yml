@@ -27,7 +27,7 @@
   services: ["data-science", "engineering", "training"]
 
 - contact_name: Brian Tran
-  affiliation: Co-founder and CTO, TRAK Data Inc. (Fusion92)
+  affiliation: Co-founder and CTO, TRAK Data Inc.
   testimonial: If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
   full_testimonial: Working with Analythium has been a great experience. If you are looking for a team to finish exactly what you set out, as well as educate and teach along the way, I highly recommend Analythium. They are our go-to vendor when the skills and expertise needed are out of our wheelhouse.
   data: brian-tran
@@ -47,7 +47,7 @@
   services: ["data-science", "engineering", "training"]
 
 - contact_name: Emily Riederer
-  affiliation: Capital One
+  affiliation: Model Risk Officer, Capital One
   testimonial: A phenomenal set of articles and tools ... these are can't-miss 🙏🏻.
   full_testimonial: A phenomenal set of articles and tools ... these are can't-miss 🙏🏻.
   data: emily-riederer
