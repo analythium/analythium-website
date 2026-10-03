@@ -733,6 +733,19 @@ a:focus {
   margin: 0 auto;
 }
 
+.about-collaboration .landing-secondary-action {
+  border-color: var(--site-accent);
+  background: var(--site-accent);
+  color: #000;
+}
+
+.about-collaboration .landing-secondary-action:hover,
+.about-collaboration .landing-secondary-action:focus-visible {
+  border-color: var(--site-gold);
+  background: var(--site-gold);
+  color: #000;
+}
+
 .service-cta-well {
   padding: clamp(2rem, 5vw, 3.5rem);
   border: 1px solid var(--site-border);
