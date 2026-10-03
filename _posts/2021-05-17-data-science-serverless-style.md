@@ -6,10 +6,7 @@ author: Peter Solymos
 thumbnail: /assets/images/blog/data-science-serverless-style-1-36828205.jpg
 thumbnail_alt: Data Science Serverless-style
 tags:
-- Cloud
-- Containers
-- FaaS
-- Open Source
+- Hosting
 source: https://blog.analythium.io/data-science-serverless-style/
 ---
 ![Data Science Serverless-style]({{ '/assets/images/blog/data-science-serverless-style-1-36828205.jpg' | relative_url }})

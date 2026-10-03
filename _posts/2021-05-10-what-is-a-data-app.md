@@ -6,8 +6,7 @@ author: Peter Solymos
 thumbnail: /assets/images/blog/what-is-a-data-app-1-93d436dd.jpg
 thumbnail_alt: What Is a Data App?
 tags:
-- Data
-- Cloud
+- Hosting
 source: https://blog.analythium.io/what-is-a-data-app/
 ---
 ![What Is a Data App?]({{ '/assets/images/blog/what-is-a-data-app-1-93d436dd.jpg' | relative_url }})

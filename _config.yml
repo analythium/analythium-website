@@ -10,6 +10,8 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: <!--truncate-->
 timezone: UTC
+exclude:
+  - _tmp
 announcement:
   enabled: true
   id: site-announcement-1

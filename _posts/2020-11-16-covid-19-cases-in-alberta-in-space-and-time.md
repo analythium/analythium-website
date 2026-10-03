@@ -6,8 +6,6 @@ author: Analythium Data Science Team
 thumbnail: /assets/images/blog/covid-19-cases-in-alberta-in-space-and-time-1-36ed86a3.jpg
 thumbnail_alt: COVID-19 Cases in Alberta in Space and Time
 tags:
-- COVID-19
-- Case Studies
 - Health
 source: https://blog.analythium.io/covid-19-cases-in-alberta-in-space-and-time/
 ---

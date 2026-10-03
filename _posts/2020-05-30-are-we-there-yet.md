@@ -6,7 +6,7 @@ author: Analythium Data Science Team
 thumbnail: /assets/images/blog/are-we-there-yet-1-30b06b99.png
 thumbnail_alt: Are We There Yet?
 tags:
-- COVID-19
+- Health
 source: https://blog.analythium.io/are-we-there-yet/
 ---
 # Decision-making under extreme uncertainty in the COVID-19 pandemic

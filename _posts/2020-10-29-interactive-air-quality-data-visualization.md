@@ -6,7 +6,6 @@ author: Peter Solymos
 thumbnail: /assets/images/blog/interactive-air-quality-data-visualization-1-e15acad6.jpg
 thumbnail_alt: Interactive Air Quality Data Visualization
 tags:
-- Case Studies
 - Environment
 source: https://blog.analythium.io/interactive-air-quality-data-visualization/
 ---

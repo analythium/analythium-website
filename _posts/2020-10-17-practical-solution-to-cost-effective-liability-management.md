@@ -6,7 +6,7 @@ author: Peter Solymos
 thumbnail: /assets/images/blog/practical-solution-to-cost-effective-liability-management-1-6cbeda01.jpg
 thumbnail_alt: Practical Solution to Cost Effective Liability Management
 tags:
-- Conferences
+- News
 - Environment
 source: https://blog.analythium.io/practical-solution-to-cost-effective-liability-management/
 ---

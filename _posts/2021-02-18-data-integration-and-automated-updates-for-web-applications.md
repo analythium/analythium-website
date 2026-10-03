@@ -6,8 +6,7 @@ author: Analythium Data Science Team
 thumbnail: /assets/images/blog/data-integration-and-automated-updates-for-web-applications-1-8ae15bd1.jpg
 thumbnail_alt: Data Integration and Automated Updates for Web Applications
 tags:
-- COVID-19
-- Data
+- Health
 source: https://blog.analythium.io/data-integration-and-automated-updates-for-web-applications/
 ---
 ![Data Integration and Automated Updates for Web Applications]({{ '/assets/images/blog/data-integration-and-automated-updates-for-web-applications-1-8ae15bd1.jpg' | relative_url }})

@@ -7,7 +7,6 @@ thumbnail: /assets/images/blog/the-analythium-blog-1-cae301a3.jpg
 thumbnail_alt: The Analythium Blog
 tags:
 - News
-- General
 source: https://blog.analythium.io/the-analythium-blog/
 ---
 ![The Analythium Blog]({{ '/assets/images/blog/the-analythium-blog-1-cae301a3.jpg' | relative_url }})

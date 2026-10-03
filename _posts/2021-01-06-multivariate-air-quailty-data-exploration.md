@@ -6,9 +6,7 @@ author: Analythium Data Science Team
 thumbnail: /assets/images/blog/multivariate-air-quailty-data-exploration-1-c570418a.jpg
 thumbnail_alt: Multivariate Air Quality Data Exploration
 tags:
-- Data
 - Environment
-- Case Studies
 source: https://blog.analythium.io/multivariate-air-quailty-data-exploration/
 ---
 ![Multivariate Air Quality Data Exploration]({{ '/assets/images/blog/multivariate-air-quailty-data-exploration-1-c570418a.jpg' | relative_url }})

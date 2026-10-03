@@ -5,11 +5,7 @@ author: Peter Solymos
 thumbnail: https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80
 thumbnail_alt: Developer working with application code
 tags:
-  - R
-  - Shiny
-  - ShinyProxy
-  - DigitalOcean
-  - Marketplace
+  - Hosting
 ---
 
 Deploying interactive R Shiny applications at scale is easier than ever using the 1-Click ShinyProxy app by Analythium from the DigitalOcean Marketplace.
