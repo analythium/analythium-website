@@ -1,0 +1,24 @@
+- name: OpenFaaS R templates
+  repository: openfaas-rstats-templates
+  description: OpenFaaS templates for building and deploying R functions in serverless environments using Kubernetes.
+  technology: Docker
+- name: ShinyProxy 1-Click App
+  repository: shinyproxy-1-click
+  description: A one-click deployment option for ShinyProxy on DigitalOcean virtual servers.
+  technology: Shell
+- name: rconfig
+  repository: rconfig
+  description: Manage R configuration at the command line.
+  technology: R
+- name: deps
+  repository: deps
+  description: Dependency management with roxygen-style comments.
+  technology: R
+- name: Quarto Docker examples
+  repository: quarto-docker-examples
+  description: Quarto examples with Docker.
+  technology: Docker
+- name: tryr
+  repository: tryr
+  description: Client/server error handling for the Plumber and RestRserve HTTP API frameworks.
+  technology: R

@@ -1,34 +1,46 @@
 <footer class="site-footer py-5">
   <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-md-5">
+    <div class="footer-columns align-items-start">
+      <div>
         <div class="d-flex align-items-center gap-3 mb-3">
-          <img class="site-logo" src="{{ '/assets/images/logo-white.svg' | relative_url }}" data-dark-logo="{{ '/assets/images/logo-white.svg' | relative_url }}" data-light-logo="{{ '/assets/images/logo.svg' | relative_url }}" alt="Analythium logo" width="40" height="36">
-          <span class="h5 mb-0">Analythium</span>
+          <img class="site-logo" src="{{ '/assets/images/logo-white.svg' | relative_url }}" data-dark-logo="{{ '/assets/images/logo-white.svg' | relative_url }}" data-light-logo="{{ '/assets/images/logo.svg' | relative_url }}" alt="{{ site.title }} logo" width="40" height="36">
+          <span class="h5 mb-0">{{ site.title }}</span>
         </div>
         <p class="text-secondary mb-0">{{ site.description }}</p>
       </div>
-      <div class="col-6 col-md-3">
+      <div>
         <h2 class="h6 text-uppercase text-secondary">Explore</h2>
         <ul class="list-unstyled mb-0">
           <li class="mb-2"><a href="{{ '/' | relative_url }}">Home</a></li>
           <li class="mb-2"><a href="{{ '/services/' | relative_url }}">Services</a></li>
           <li class="mb-2"><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
           <li class="mb-2"><a href="{{ '/apps/' | relative_url }}">Apps</a></li>
-          <li class="mb-2"><a href="{{ '/services/training/' | relative_url }}">Training</a></li>
+          <li class="mb-2"><a href="{{ '/open-source/' | relative_url }}">Open Source</a></li>
           <li class="mb-2"><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
           <li class="mb-2"><a href="{{ '/about/' | relative_url }}">About</a></li>
         </ul>
       </div>
-      <div class="col-6 col-md-4">
-        <h2 class="h6 text-uppercase text-secondary">Links</h2>
+      <div>
+        <h2 class="h6 text-uppercase text-secondary">Follow us</h2>
         <ul class="list-unstyled mb-0">
           <li class="mb-2"><a class="footer-social-link" href="https://www.youtube.com/@analythium"><i class="bi bi-youtube" aria-hidden="true"></i><span>YouTube</span></a></li>
           <li class="mb-2"><a class="footer-social-link" href="https://github.com/analythium/"><i class="bi bi-github" aria-hidden="true"></i><span>GitHub</span></a></li>
           <li class="mb-2"><a class="footer-social-link" href="https://www.linkedin.com/company/analythium/"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>
         </ul>
       </div>
+      <div>
+        <h2 class="h6 text-uppercase text-secondary">Contact us</h2>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="{{ '/contact/' | relative_url }}">Contact form</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="text-secondary small mb-0 mt-5">&copy; 2019&ndash;{{ site.time | date: '%Y' }} Analythium Solutions Inc.</p>
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mt-5">
+      <p class="text-secondary small mb-0">&copy; 2019&ndash;{{ site.time | date: '%Y' }} {{ site.companyname | default: 'Analythium Solutions Inc.' }}</p>
+      <nav class="d-flex flex-wrap gap-3" aria-label="Legal">
+        <a class="small" href="{{ '/terms/' | relative_url }}">Terms of Use</a>
+        <a class="small" href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+      </nav>
+    </div>
   </div>
 </footer>

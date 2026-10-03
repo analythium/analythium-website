@@ -109,6 +109,12 @@ a:focus {
   backdrop-filter: blur(10px);
 }
 
+.footer-columns {
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
 .site-nav {
   border-bottom: 1px solid var(--site-border);
 }
@@ -731,7 +737,7 @@ a:focus {
   padding: clamp(2rem, 5vw, 3.5rem);
   border: 1px solid var(--site-border);
   border-radius: 0.5rem;
-  background: var(--site-panel);
+  background: linear-gradient(135deg, rgba(255, 213, 79, 0.16) 0%, rgba(255, 213, 79, 0.06) 52%, transparent 82%), var(--site-panel);
   box-shadow: 0 1rem 3rem var(--site-shadow);
 }
 
@@ -754,6 +760,10 @@ a:focus {
 }
 
 @media (max-width: 575.98px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .card-with-thumbnail {
     grid-template-columns: 1fr;
   }
