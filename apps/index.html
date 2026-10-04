@@ -15,7 +15,27 @@ permalink: /apps/
       </div>
     </div>
 
-    <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 d-grid gap-4">
+        {% assign apps = site.apps | sort: 'title' %}
+        {% for app in apps %}
+          <article class="post-card card-with-thumbnail">
+            {% if app.thumbnail %}
+              <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ app.thumbnail | relative_url }}" alt="{{ app.thumbnail_alt | default: app.title }}" loading="lazy">
+              </a>
+            {% endif %}
+            <div class="card-content p-4 p-md-5">
+              <h2 class="h3 mb-3"><a href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ app.title }}</a></h2>
+              <p class="text-secondary mb-4">{{ app.description }}</p>
+              <a class="btn btn-outline-light rounded-pill px-4" href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">Open app</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
       <div class="col-lg-8">
         <section class="service-cta-well text-center" aria-labelledby="apps-cta-heading">
           <p class="section-label mb-3">Build your own</p>
@@ -23,26 +43,6 @@ permalink: /apps/
           <p class="text-secondary mb-4">We design and deliver interactive data products tailored to the questions your team needs to answer.</p>
           <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Talk to Analythium</a>
         </section>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8 d-grid gap-4">
-        {% assign apps = site.apps | sort: 'title' %}
-        {% for app in apps %}
-          <article class="post-card card-with-thumbnail">
-            {% if app.thumbnail %}
-              <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title }}">
-                <img src="{{ app.thumbnail | relative_url }}" alt="{{ app.thumbnail_alt | default: app.title }}" loading="lazy">
-              </a>
-            {% endif %}
-            <div class="card-content p-4 p-md-5">
-              <h2 class="h3 mb-3"><a href="{{ app.url | relative_url }}">{{ app.title }}</a></h2>
-              <p class="text-secondary mb-4">{{ app.description }}</p>
-              <a class="btn btn-outline-light rounded-pill px-4" href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">Open app</a>
-            </div>
-          </article>
-        {% endfor %}
       </div>
     </div>
   </div>
