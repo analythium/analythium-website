@@ -15,17 +15,6 @@ permalink: /projects/
       </div>
     </div>
 
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8">
-        <section class="service-cta-well text-center" aria-labelledby="projects-cta-heading">
-          <p class="section-label mb-3">Work with us</p>
-          <h2 id="projects-cta-heading" class="h3 mb-3">Have a data challenge worth solving?</h2>
-          <p class="text-secondary mb-4">We bring the analytical, engineering, and design expertise needed to turn complex work into an outcome your team can use.</p>
-          <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
-        </section>
-      </div>
-    </div>
-
     {% assign projects = site.projects | sort: 'date' | reverse %}
     {% capture all_project_services %}{% for project in projects %}{% for service in project.services %}{{ service }}|{% endfor %}{% endfor %}{% endcapture %}
     {% assign project_services = all_project_services | split: '|' | uniq | sort %}
@@ -60,6 +49,17 @@ permalink: /projects/
       </div>
     </div>
     <p class="post-filter-empty text-center mt-4 mb-0" data-project-empty hidden>No projects match this service yet.</p>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <section class="service-cta-well text-center" aria-labelledby="projects-cta-heading">
+          <p class="section-label mb-3">Work with us</p>
+          <h2 id="projects-cta-heading" class="h3 mb-3">Have a data challenge worth solving?</h2>
+          <p class="text-secondary mb-4">We bring the analytical, engineering, and design expertise needed to turn complex work into an outcome your team can use.</p>
+          <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
+        </section>
+      </div>
+    </div>
   </div>
 </main>
 <script>
