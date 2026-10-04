@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: COVID-19 Cases in Alberta in Space and Time
 date: '2020-11-16 08:52:31 +0000'
 author: Analythium Data Science Team

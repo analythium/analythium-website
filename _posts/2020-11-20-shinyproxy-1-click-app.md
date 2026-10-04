@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: ShinyProxy 1-click App
 author: Peter Solymos
 thumbnail: https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80

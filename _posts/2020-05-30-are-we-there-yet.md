@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Are We There Yet?
 date: '2020-05-30 03:46:00 +0000'
 author: Analythium Data Science Team

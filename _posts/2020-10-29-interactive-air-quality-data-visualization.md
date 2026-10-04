@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Interactive Air Quality Data Visualization
 date: '2020-10-29 03:24:29 +0000'
 author: Peter Solymos

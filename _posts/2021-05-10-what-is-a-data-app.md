@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: What Is a Data App?
 date: '2021-05-10 14:00:00 +0000'
 author: Peter Solymos

@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Multivariate Air Quality Data Exploration
 date: '2021-01-06 05:58:39 +0000'
 author: Analythium Data Science Team

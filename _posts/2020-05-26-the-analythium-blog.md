@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: The Analythium Blog
 date: '2020-05-26 04:44:20 +0000'
 author: Peter Solymos

@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: We Launched Hosting Data Apps
 date: '2021-04-12 12:00:00 +0000'
 author: Peter Solymos

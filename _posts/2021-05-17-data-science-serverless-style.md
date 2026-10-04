@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Data Science Serverless-style
 date: '2021-05-17 12:00:00 +0000'
 author: Peter Solymos

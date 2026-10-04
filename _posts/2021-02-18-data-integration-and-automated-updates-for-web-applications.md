@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Data Integration and Automated Updates for Web Applications
 date: '2021-02-18 08:35:00 +0000'
 author: Analythium Data Science Team

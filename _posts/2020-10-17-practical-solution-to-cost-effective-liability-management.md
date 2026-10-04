@@ -1,5 +1,6 @@
 ---
 layout: post
+backlink: /blog/
 title: Practical Solution to Cost Effective Liability Management
 date: '2020-10-17 02:57:05 +0000'
 author: Peter Solymos
