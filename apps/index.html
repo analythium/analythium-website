@@ -19,7 +19,7 @@ permalink: /apps/
       <div class="col-lg-8 d-grid gap-4">
         {% assign apps = site.apps | sort: 'title' %}
         {% for app in apps %}
-          <article class="post-card card-with-thumbnail">
+          <article class="post-card{% if app.thumbnail %} card-with-thumbnail{% endif %}">
             {% if app.thumbnail %}
               <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title }}" target="_blank" rel="noopener noreferrer">
                 <img src="{{ app.thumbnail | relative_url }}" alt="{{ app.thumbnail_alt | default: app.title }}" loading="lazy">
