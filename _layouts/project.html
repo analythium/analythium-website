@@ -5,8 +5,8 @@ layout: default
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <a class="text-decoration-none small text-uppercase fw-semibold tracking-wide" href="{{ '/projects/' | relative_url }}">&larr; Back to projects</a>
-        <article class="post-card mt-3 p-4 p-md-5">
+        {% if page.backlink %}<a class="text-decoration-none small text-uppercase fw-semibold tracking-wide" href="{{ page.backlink | relative_url }}">&larr; Back to projects</a>{% endif %}
+        <article class="mt-3">
           <header class="mb-4">
             <p class="text-secondary mb-2">{{ page.date | date: "%B %Y" }}</p>
             <h1 class="display-6 mb-3">{{ page.title }}</h1>

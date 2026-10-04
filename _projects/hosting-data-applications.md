@@ -1,5 +1,6 @@
 ---
 layout: project
+backlink: /projects/
 title: Hosting Data Applications Guide
 date: 2026-06-09
 summary: A practical resource for choosing and operating the right home for production-ready data applications.
