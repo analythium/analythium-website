@@ -566,6 +566,10 @@ a:focus {
   padding: 0;
 }
 
+.app-card.card-with-thumbnail {
+  grid-template-columns: minmax(0, 50%) minmax(0, 1fr);
+}
+
 .card-thumbnail {
   display: block;
   min-height: 100%;
