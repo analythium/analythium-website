@@ -39,9 +39,9 @@ permalink: /projects/
           <h2 class="h3 mb-4">Featured projects</h2>
         {% endif %} -->
         {% for project in featured_projects %}
-          <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
+          <article class="post-card card-with-thumbnail project-list-card" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
             <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
-              <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
+              <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | default: project.title | escape }}" loading="lazy">
             </a>
             <div class="card-content p-4 p-md-5">
             {% if project.date %}<p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>{% endif %}
@@ -55,9 +55,9 @@ permalink: /projects/
           <h2 class="h3 mb-4{% if featured_projects.size > 0 %} mt-5{% endif %}">More projects</h2>
         {% endif %} -->
         {% for project in other_projects %}
-          <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
+          <article class="post-card card-with-thumbnail project-list-card" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
             <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
-              <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
+              <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | default: project.title | escape }}" loading="lazy">
             </a>
             <div class="card-content p-4 p-md-5">
             {% if project.date %}<p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>{% endif %}
