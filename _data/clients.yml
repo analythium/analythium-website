@@ -8,7 +8,7 @@
 
 - name: Lactanet
   data: lactanet
-  logo_path: /assets/images/clients/lactanet.jpg
+  logo_path: /assets/images/clients/lactanet.png
   url: https://lactanet.ca/en/
   featured: no
   services: ["engineering"]
@@ -32,17 +32,17 @@
 
 - name: Biodiversity Pathways
   data: biopath
-  logo_path: /assets/images/clients/bio-path.jpg
+  logo_path: /assets/images/clients/bio-path.png
   url: https://biodiversitypathways.ca/
-  featured: no
+  featured: yes
   services: ["data-science"]
   sector: Biodiversity monitoring
 
 - name: Alberta Biodiversity Monitoring Institute
   data: abmi
-  logo_path: /assets/images/clients/abmi.jpg
+  logo_path: /assets/images/clients/abmi.png
   url: https://abmi.ca/abmi-home
-  featured: no
+  featured: yes
   services: ["engineering"]
   sector: Biodiversity monitoring
 
@@ -64,7 +64,7 @@
 
 - name: Canadian Forest Service
   data: cfs
-  logo_path: /assets/images/clients/nrcan-cfs.svg
+  logo_path: /assets/images/clients/eccc.svg
   url: https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service
   featured: no
   services: ["engineering"]
@@ -72,7 +72,7 @@
 
 - name: Yukon Government
   data: yukon-gov
-  logo_path: /assets/images/clients/gov-yukon.png
+  logo_path: /assets/images/clients/gov-yukon.svg
   url: https://yukon.ca/
   featured: yes
   services: ["data-science", "engineering", "training"]
@@ -96,7 +96,7 @@
 
 # - name: Campbell & Company
 #   data: campbell-co
-#   logo_path: /assets/images/clients/campbell-company.svg
+#   logo_path: /assets/images/clients/campbell-company.png
 #   url: https://www.campbellcompany.com/
 #   featured: no
 #   services: ["engineering"]
