@@ -16,6 +16,8 @@ permalink: /projects/
     </div>
 
     {% assign projects = site.projects | sort: 'date' | reverse %}
+    {% assign featured_projects = projects | where: 'featured', true %}
+    {% assign other_projects = projects | where: 'featured', false %}
     {% capture all_project_services %}{% for project in projects %}{% for service in project.services %}{{ service }}|{% endfor %}{% endfor %}{% endcapture %}
     {% assign project_services = all_project_services | split: '|' | uniq | sort %}
     <div class="post-tabs" role="tablist" aria-label="Filter projects by service" data-project-filters>
@@ -33,7 +35,26 @@ permalink: /projects/
 
     <div class="row justify-content-center">
       <div id="project-list" class="col-lg-8 blog-list" role="tabpanel" data-project-list>
-        {% for project in projects %}
+        {% if featured_projects.size > 0 %}
+          <h2 class="h3 mb-4">Featured projects</h2>
+        {% endif %}
+        {% for project in featured_projects %}
+          <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
+            <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
+              <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
+            </a>
+            <div class="card-content p-4 p-md-5">
+            <p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>
+            <h2 class="h3 mb-3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+            <p class="text-secondary mb-0">{{ project.summary }}</p>
+            <a class="btn btn-outline-light rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>
+            </div>
+          </article>
+        {% endfor %}
+        {% if other_projects.size > 0 %}
+          <h2 class="h3 mb-4{% if featured_projects.size > 0 %} mt-5{% endif %}">More projects</h2>
+        {% endif %}
+        {% for project in other_projects %}
           <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
             <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
               <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">

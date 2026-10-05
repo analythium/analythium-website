@@ -1,6 +1,7 @@
 ---
 layout: project
 backlink: /projects/
+featured: yes
 title: Spatial Data Visualization and Management
 date: 2026-09-15
 summary: An accessible spatial-data interface designed to make complex concepts understandable and useful.

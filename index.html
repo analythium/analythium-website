@@ -28,8 +28,8 @@ thumbnail: /assets/images/blog/we-launched-hosting-data-apps-1-9c0380ea.jpg
         <h2 id="projects-heading">Project highlights</h2>
       </div>
       <div class="row g-4">
-        {% assign recent_projects = site.projects | sort: 'date' | reverse | slice: 0, 4 %}
-        {% for project in recent_projects %}
+        {% assign featured_projects = site.projects | where: 'featured', true | sort: 'date' | reverse %}
+        {% for project in featured_projects %}
           <div class="col-md-6">
             <article class="post-card card-with-thumbnail h-100">
               <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">

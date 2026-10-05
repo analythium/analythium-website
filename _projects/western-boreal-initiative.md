@@ -1,6 +1,7 @@
 ---
 layout: project
 backlink: /projects/
+featured: no
 title: Western Boreal Initiative
 subtitle: Forecasting cumulative effects on forests, wildlife, and other values across Canada's Western Boreal region.
 summary: A collaborative initiative developing spatial tools to assess how climate change, wildfire, pests, and human disturbance affect boreal ecosystems and the values they support.

@@ -74,6 +74,7 @@ Structure for post:
   - list the project services
 
 - Sections:
+  - Motivation
   - The project
   - Our results
 
