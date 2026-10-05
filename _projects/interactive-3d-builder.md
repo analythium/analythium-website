@@ -1,7 +1,7 @@
 ---
 layout: project
 backlink: /projects/
-featured: yes
+featured: no
 title: Interactive 3D Plot and Table Builder
 date: 2026-07-18
 summary: A practical 3D visualization tool that brings tabular site-management data into real time.
