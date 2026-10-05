@@ -46,3 +46,45 @@ docker run --rm -it \
   analythium-website \
   bundle exec jekyll build
 ```
+
+## TODO
+
+- revise logos
+- revise services page
+- add project pages for all projects
+- revise data-science page and add project list where services = data-science
+- revise engineering page and add project list where services = engineering
+- revise training page and add project list where services = training
+- migrate apps to Connect and update URLs
+- trim down the apps list
+- blog posts for papers: wildlift, sqpad, rockerverse
+- blog post for courses: data cloning Budapest, SSC workshop
+
+Structure for post:
+
+- Header (from yml header):
+  - Project title
+  - Project subtitle
+  - Project date
+  - link to the app if there is one
+  - thumbnail image
+  - Client color logo (look up URL etc from _data/clients.yml)
+  - Client (look up URL etc from _data/clients.yml)
+  - Sector (look up from _data/clients.yml)
+  - list the project services
+
+- Sections:
+  - The project
+  - Our results
+
+
+Projects:
+
+- Alamar: use SOW
+- WBI: use url https://wbi.predictiveecology.org/
+- Yukon, moosecounter: https://github.com/psolymos/moosecounter
+- Caribou
+- MTI/FMMN???
+- Air quality exploration & air quality index
+- BC Gov: shiny app, db
+- Stanford: scaling etc.

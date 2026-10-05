@@ -22,6 +22,14 @@
   services: ["data-science", "engineering"]
   sector: Federal government
 
+- name: Environment and Climate Change Canada, Canadian Wildlife Service
+  data: cws
+  logo_path: /assets/images/clients/eccc.svg
+  url: https://www.canada.ca/en/environment-climate-change.html
+  featured: no
+  services: ["data-science", "engineering"]
+  sector: Federal government and wildlife conservation
+
 - name: Biodiversity Pathways
   data: biopat
   logo_path: /assets/images/clients/bio-path.jpg
