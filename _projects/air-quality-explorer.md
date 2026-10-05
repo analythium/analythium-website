@@ -11,9 +11,8 @@ thumbnail_alt: Mountain landscape beneath a cloudy sky
 client: eccc
 app_url: https://analythium.shinyapps.io/air-quality/
 services:
-  - Environmental analytics
-  - Interactive apps
-  - Data exploration
+  - Data science
+  - Engineering
 ---
 Large environmental datasets can be difficult to organize and interpret. This mock project presents a focused exploration experience for investigating air quality data over time and across locations.
 

@@ -9,10 +9,8 @@ thumbnail: https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=for
 thumbnail_alt: Laboratory glassware representing biomedical research
 client: alamar
 services:
-  - Shiny application architecture
-  - Multi-tenant data storage
-  - Cloud deployment
-  - Technical documentation
+  - Data science
+  - Engineering
 ---
 
 ## Motivation

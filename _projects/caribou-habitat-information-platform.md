@@ -10,9 +10,8 @@ thumbnail_alt: Forest landscape representing woodland caribou habitat
 client: abmi
 app_url: https://analythium.shinyapps.io/range-disturbance-and-recovery-tool/
 services:
-  - Habitat monitoring
-  - Spatial data platform
-  - Interactive mapping
+  - Data science
+  - Engineering
 ---
 
 ## Motivation

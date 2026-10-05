@@ -81,12 +81,31 @@ Structure for post:
 
 Projects:
 
-- Alamar: use SOW
-- WBI: use url https://wbi.predictiveecology.org/
+- DONE Alamar: use SOW
+- DONE WBI: use url https://wbi.predictiveecology.org/
+- DONE Caribou
+- DONE 3D plot builder
+
+- Air quality exploration & air quality index
 - Yukon, moosecounter: https://github.com/psolymos/moosecounter
 - BC Gov: shiny app, db
-
-- Caribou
-- Air quality exploration & air quality index
 - Stanford: scaling etc.
 - MTI/FMMN???
+
+
+LATE WINTER MOOSE DISTRIBUTION SURVEY METHODS
+Description of Duties/Deliverables:
+A) Data analysis of the late-winter Rau Road survey data (the 2019 early-winter census data analysis is complete) and a
+detailed description of the methodology used. This would involve 1) generating predictive spatial models for moose in
+late-winter during winters of high and low snow years and 2) the methodology required to quantify the potential impact
+of the proposed road.
+B) Evaluation of the survey protocol used by YG to determine if it is appropriate to detect whether the proposed road
+might have an impact on moose distribution and abundance within the 10 km buffer (eg how many blocks/moose
+locations are required to provide reasonable estimates - this will require some type of sensitivity analysis and
+simulations of existing data). This assessment is essential for Yukon Environment to recommend this approach for future
+projects.
+C) A "Manual" that would have all the information required for proponents to conduct the work. This would include the
+survey design, fieldwork, data collection, and details of the analysis.
+D) Creation of software that would facilitate data collection and analysis for proponents and consulting companies (this
+deliverable is listed as a separate budget item because it can be a separate project for next fiscal).
+

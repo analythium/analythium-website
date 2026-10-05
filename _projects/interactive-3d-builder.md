@@ -10,9 +10,8 @@ thumbnail: /assets/images/projects/tier1-3d-remediation-plot.png
 thumbnail_alt: 3D soil and groundwater sample plot with Tier 1 remediation risk categories
 app_url: https://hub.analythium.io/analythium-website/apps/plot3d/
 services:
-  - 3D visualization
-  - Site management
-  - Decision support
+  - Data science
+  - Engineering
 ---
 ## Motivation
 

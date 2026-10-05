@@ -10,9 +10,8 @@ thumbnail_alt: Study area map for the Western Boreal Initiative
 client: cws
 app_url: https://wbi.predictiveecology.org/apps/wbi/
 services:
-  - Spatial modeling
-  - Cumulative effects assessment
-  - Decision-support tools
+  - Data science
+  - Engineering
 ---
 ## Motivation
 
