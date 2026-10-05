@@ -1,6 +1,6 @@
 # analythium-website
 
-> Analythium website.
+> Analythium website
 
 ## Local development with Docker
 
