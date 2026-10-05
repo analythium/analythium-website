@@ -4,8 +4,11 @@ backlink: /projects/
 title: Air Quality Data Explorer
 date: 2026-08-22
 summary: An interactive workspace for exploring air quality patterns across space and time.
+subtitle: Explore air quality patterns across locations and time in an interactive workspace.
 thumbnail: https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80
 thumbnail_alt: Mountain landscape beneath a cloudy sky
+client: eccc
+app_url: https://analythium.shinyapps.io/air-quality/
 services:
   - Environmental analytics
   - Interactive apps

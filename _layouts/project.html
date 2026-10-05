@@ -7,24 +7,57 @@ layout: default
       <div class="col-lg-8">
         {% if page.backlink %}<a class="text-decoration-none small text-uppercase fw-semibold tracking-wide" href="{{ page.backlink | relative_url }}">&larr; Back to projects</a>{% endif %}
         <article class="mt-3">
-          <header class="mb-4">
+          <header class="project-header mb-5">
             {% if page.date %}<p class="text-secondary mb-2">{{ page.date | date: "%B %Y" }}</p>{% endif %}
             <h1 class="display-6 mb-3">{{ page.title }}</h1>
-            {% if page.summary %}<p class="mb-0 text-secondary">{{ page.summary }}</p>{% endif %}
+            {% assign project_subtitle = page.subtitle | default: page.summary %}
+            {% if project_subtitle %}<p class="mb-0 text-secondary">{{ project_subtitle | escape }}</p>{% endif %}
+            {% if page.app_url %}
+              <p class="mt-3 mb-0"><a class="btn btn-warning rounded-pill px-4" href="{{ page.app_url }}" target="_blank" rel="noopener noreferrer">Open app</a></p>
+            {% endif %}
+            {% if page.thumbnail %}
+              <figure class="project-header-thumbnail mt-4 mb-0">
+                <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail_alt | default: page.title | escape }}" loading="lazy">
+              </figure>
+            {% endif %}
+            {% if page.client %}
+              {% assign project_client = site.data.clients | where: "data", page.client | first %}
+              {% if project_client %}
+                <div class="project-client mt-4 d-flex align-items-center gap-3">
+                  {% if project_client.logo_path %}
+                    <a class="project-client-logo" href="{{ project_client.url }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project_client.name | escape }} website">
+                      <img src="{{ project_client.logo_path | relative_url }}" alt="{{ project_client.name | escape }} logo" loading="lazy">
+                    </a>
+                  {% endif %}
+                  <div>
+                    <p class="section-label mb-1">Client</p>
+                    <p class="mb-0"><a href="{{ project_client.url }}" target="_blank" rel="noopener noreferrer">{{ project_client.name | escape }}</a></p>
+                    {% if project_client.sector %}<p class="text-secondary small mb-0">Sector: {{ project_client.sector | escape }}</p>{% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endif %}
+            {% if page.services %}
+              <div class="project-services mt-4" aria-label="Project services">
+                <p class="section-label mb-2">Services</p>
+                <div class="d-flex flex-wrap gap-2">
+                  {% for service in page.services %}
+                    <span class="badge rounded-pill text-bg-dark border border-white border-opacity-10">{{ service | escape }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
           </header>
           <div class="post-content">
             {{ content }}
           </div>
-          {% if page.services %}
-            <footer class="mt-4 pt-4 border-top border-white border-opacity-10">
-              <div class="d-flex flex-wrap gap-2">
-                {% for service in page.services %}
-                  <span class="badge rounded-pill text-bg-dark border border-white border-opacity-10">{{ service }}</span>
-                {% endfor %}
-              </div>
-            </footer>
-          {% endif %}
         </article>
+        <section class="service-cta-well text-center mt-5" aria-labelledby="project-cta-heading">
+          <p class="section-label mb-3">Work with us</p>
+          <h2 id="project-cta-heading" class="h3 mb-3">Have a project in mind?</h2>
+          <p class="text-secondary mb-4">Let’s talk about how Analythium can help turn your data challenge into a useful outcome.</p>
+          <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
+        </section>
       </div>
     </div>
   </div>
