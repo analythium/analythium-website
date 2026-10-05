@@ -86,59 +86,5 @@
     {% else %}
     {{ content }}
     {% endif %}
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-      (function () {
-        const themeToggle = document.querySelector('.theme-toggle');
-        const root = document.documentElement;
-
-        function updateTheme(theme) {
-          const isLight = theme === 'light';
-          root.dataset.theme = theme;
-          localStorage.setItem('theme', theme);
-          themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
-          themeToggle.setAttribute('aria-pressed', String(isLight));
-          document.querySelectorAll('.site-logo').forEach((logo) => {
-            logo.src = isLight ? logo.dataset.lightLogo : logo.dataset.darkLogo;
-          });
-        }
-
-        updateTheme(root.dataset.theme);
-        themeToggle.addEventListener('click', () => {
-          updateTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
-        });
-      }());
-    </script>
-    <script>
-      (function () {
-        const announcement = document.querySelector('[data-announcement]');
-
-        if (!announcement) {
-          return;
-        }
-
-        const storageKey = `announcement-dismissed:${announcement.dataset.announcementId}`;
-
-        try {
-          if (localStorage.getItem(storageKey) === 'true') {
-            announcement.hidden = true;
-            return;
-          }
-        } catch (error) {
-          // Continue showing the announcement when local storage is unavailable.
-        }
-
-        announcement.querySelector('[data-announcement-close]').addEventListener('click', () => {
-          announcement.hidden = true;
-
-          try {
-            localStorage.setItem(storageKey, 'true');
-          } catch (error) {
-            // Dismissal still applies for the current page when local storage is unavailable.
-          }
-        });
-      }());
-    </script>
   </body>
 </html>

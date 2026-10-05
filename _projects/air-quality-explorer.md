@@ -1,7 +1,7 @@
 ---
 layout: project
 backlink: /projects/
-featured: yes
+featured: no
 title: Air Quality Data Explorer
 date: 2026-08-22
 summary: An interactive workspace for exploring air quality patterns across space and time.
