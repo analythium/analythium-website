@@ -8,7 +8,7 @@ summary: A practical 3D visualization tool that brings tabular site-management d
 subtitle: Turn site-management tables into an interactive 3D view.
 thumbnail: /assets/images/projects/tier1-3d-remediation-plot.png
 thumbnail_alt: 3D soil and groundwater sample plot with Tier 1 remediation risk categories
-app_url: https://hub.analythium.io/analythium-website/apps/plot3d/
+app_url: https://hub.analythium.io/apps/plot3d/
 services:
   - Data science
   - Engineering
