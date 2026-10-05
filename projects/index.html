@@ -44,7 +44,7 @@ permalink: /projects/
               <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
             </a>
             <div class="card-content p-4 p-md-5">
-            <p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>
+            {% if project.date %}<p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>{% endif %}
             <h2 class="h3 mb-3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
             <p class="text-secondary mb-0">{{ project.summary }}</p>
             <a class="btn btn-outline-light rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>
@@ -60,7 +60,7 @@ permalink: /projects/
               <img src="{{ project.thumbnail }}" alt="{{ project.thumbnail_alt }}" loading="lazy">
             </a>
             <div class="card-content p-4 p-md-5">
-            <p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>
+            {% if project.date %}<p class="text-secondary mb-2">{{ project.date | date: "%B %Y" }}</p>{% endif %}
             <h2 class="h3 mb-3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
             <p class="text-secondary mb-0">{{ project.summary }}</p>
             <a class="btn btn-outline-light rounded-pill px-4 mt-4" href="{{ project.url | relative_url }}">View project</a>

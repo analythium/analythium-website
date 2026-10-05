@@ -6,16 +6,22 @@ title: Interactive 3D Plot and Table Builder
 date: 2026-07-18
 summary: A practical 3D visualization tool that brings tabular site-management data into real time.
 subtitle: Turn site-management tables into an interactive 3D view.
-thumbnail: https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80
-thumbnail_alt: Abstract three-dimensional geometry
-app_url: https://analythium.shinyapps.io/plot3d/
+thumbnail: /assets/images/projects/tier1-3d-remediation-plot.png
+thumbnail_alt: 3D soil and groundwater sample plot with Tier 1 remediation risk categories
+app_url: https://hub.analythium.io/analythium-website/apps/plot3d/
 services:
   - 3D visualization
   - Site management
   - Decision support
 ---
-This mock project turns flat tables into an interactive 3D view, helping spatially oriented teams inspect information from more useful angles.
+## Motivation
 
-<!--truncate-->
+Assessing contaminated sites involves comparing soil and groundwater measurements with applicable remediation targets. Alberta's Tier 1 soil and groundwater remediation guidelines provide generic targets designed to protect sensitive sites and can be applied at most sites without modification. Communicating measurements and target comparisons across locations and depth can be difficult in flat tables alone.
 
-The concept is based on the interactive 3D plot and table builder featured on analythium.io, which is intended to complement contaminated site management workflows and reveal insights in real time.
+## The project
+
+Analythium built the interactive 3D plot and table builder to support site-management workflows by turning tabular measurements into linked tables and three-dimensional visualizations. It supports [Alberta Tier 1 soil and groundwater remediation guidelines](https://open.alberta.ca/publications/1926-6243), helping users explore measurements in relation to the selected target criteria and inspect their spatial and depth patterns.
+
+## Our results
+
+The builder provides an interactive way to explore site data alongside Tier 1 soil and groundwater targets, making patterns easier to inspect than in a table alone. The visualization supports analysis and communication of site information; it does not replace professional interpretation or the official guidelines.

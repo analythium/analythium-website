@@ -36,7 +36,7 @@ thumbnail: /assets/images/blog/we-launched-hosting-data-apps-1-9c0380ea.jpg
                 <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | default: project.title }}" loading="lazy">
               </a>
               <div class="card-content p-4 p-lg-5">
-              <p class="post-meta mb-3">{{ project.date | date: "%B %Y" }}</p>
+              {% if project.date %}<p class="post-meta mb-3">{{ project.date | date: "%B %Y" }}</p>{% endif %}
               <h3 class="h3"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
               <p class="text-secondary mb-4">{{ project.summary }}</p>
               <a class="post-read-link" href="{{ project.url | relative_url }}">View project <span aria-hidden="true">&rarr;</span></a>
