@@ -35,9 +35,9 @@ permalink: /projects/
 
     <div class="row justify-content-center">
       <div id="project-list" class="col-lg-8 blog-list" role="tabpanel" data-project-list>
-        {% if featured_projects.size > 0 %}
+        <!-- {% if featured_projects.size > 0 %}
           <h2 class="h3 mb-4">Featured projects</h2>
-        {% endif %}
+        {% endif %} -->
         {% for project in featured_projects %}
           <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
             <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
@@ -51,9 +51,9 @@ permalink: /projects/
             </div>
           </article>
         {% endfor %}
-        {% if other_projects.size > 0 %}
+        <!-- {% if other_projects.size > 0 %}
           <h2 class="h3 mb-4{% if featured_projects.size > 0 %} mt-5{% endif %}">More projects</h2>
-        {% endif %}
+        {% endif %} -->
         {% for project in other_projects %}
           <article class="post-card card-with-thumbnail" data-project-card data-project-services="{{ project.services | join: '|' | downcase | escape }}">
             <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
