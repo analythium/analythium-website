@@ -1,9 +1,10 @@
-- name: Fort McKay Metis Nation
+- name: Fort McKay Métis Nation
   data: fmmn
   logo_path: /assets/images/clients/fmmn.png
   url: https://fortmckaymetis.com/
   featured: yes
   services: ["data-science", "engineering"]
+  sector: Indigenous government
 
 - name: Lactanet
   data: lactanet
@@ -11,6 +12,7 @@
   url: https://lactanet.ca/en/
   featured: no
   services: ["engineering"]
+  sector: Dairy and agriculture
 
 - name: Environment and Climate Change Canada
   data: eccc
@@ -18,6 +20,7 @@
   url: https://www.canada.ca/en/environment-climate-change.html
   featured: yes
   services: ["data-science", "engineering"]
+  sector: Federal government
 
 - name: Biodiversity Pathways
   data: biopat
@@ -25,6 +28,7 @@
   url: https://biodiversitypathways.ca/
   featured: no
   services: ["data-science"]
+  sector: Biodiversity monitoring
 
 - name: Alberta Biodiversity Monitoring Institute
   data: abmi
@@ -32,6 +36,7 @@
   url: https://abmi.ca/abmi-home
   featured: no
   services: ["engineering"]
+  sector: Biodiversity monitoring
 
 - name: Fusion92
   data: fusion92
@@ -39,6 +44,7 @@
   url: https://www.fusion92.com/
   featured: no
   services: ["engineering"]
+  sector: Marketing
 
 - name: Ketchbrook Analytics
   data: ketchbrook
@@ -46,6 +52,7 @@
   url: https://ketchbrookanalytics.com/
   featured: no
   services: ["data-science", "engineering"]
+  sector: Data analytics consulting
 
 - name: Canadian Forest Service
   data: cfs
@@ -53,6 +60,7 @@
   url: https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service
   featured: no
   services: ["engineering"]
+  sector: Federal government
 
 - name: Yukon Government
   data: yukon-gov
@@ -60,6 +68,7 @@
   url: https://yukon.ca/
   featured: yes
   services: ["data-science", "engineering", "training"]
+  sector: Territorial government
 
 - name: Government of British Columbia
   data: bc-gov
@@ -67,6 +76,7 @@
   url: https://www2.gov.bc.ca/gov/content/home
   featured: yes
   services: ["engineering", "training"]
+  sector: Provincial government
 
 # - name: FastR&D LLC
 #   data: fastrnd
@@ -74,6 +84,7 @@
 #   url: https://www.fastrnd.com/
 #   featured: no
 #   services: ["engineering", "training"]
+#   sector: Chemical and pharmaceutical research
 
 # - name: Campbell & Company
 #   data: campbell-co
@@ -81,6 +92,7 @@
 #   url: https://www.campbellcompany.com/
 #   featured: no
 #   services: ["engineering"]
+#   sector: Nonprofit and charitable organizations
 
 # - name: ZevRoss Spatial Analysis
 #   data: zevross
@@ -88,6 +100,7 @@
 #   url: https://www.zevross.com/
 #   featured: no
 #   services: ["engineering", "training"]
+#   sector: Spatial analysis consulting
 
 - name: Stanford University School of Medicine
   data: stanford
@@ -95,6 +108,7 @@
   url: https://med.stanford.edu/
   featured: yes
   services: ["data-science", "engineering", "training"]
+  sector: Higher education and medicine
 
 - name: University of Alberta
   data: uofa
@@ -102,6 +116,7 @@
   url: https://www.ualberta.ca/
   featured: yes
   services: ["data-science", "engineering", "training"]
+  sector: Higher education
 
 - name: Alamar Biosciences
   data: alamar
@@ -109,6 +124,7 @@
   url: https://alamarbio.com/
   featured: yes
   services: ["data-science", "engineering"]
+  sector: Biotechnology
 
 # - name: AttaliTech
 #   data: attalitech
@@ -116,6 +132,7 @@
 #   url: https://attalitech.com/
 #   featured: no
 #   services: ["data-science", "engineering", "training"]
+#   sector: Technology consulting
 
 - name: Statistical Society of Canada
   data: ssc
@@ -123,6 +140,7 @@
   url: https://ssc.ca/en
   featured: yes
   services: ["training"]
+  sector: Professional association
 
 # - name: Clinical Biostatistical Society of Hungary
 #   data: biostat-hu
@@ -130,3 +148,4 @@
 #   url: https://www.biostat.hu/
 #   featured: no
 #   services: ["training"]
+#   sector: Professional association
