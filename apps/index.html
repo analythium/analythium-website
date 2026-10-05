@@ -16,9 +16,24 @@ permalink: /apps/
     </div>
 
     {% assign apps = site.apps | sort: 'title' %}
+    {% capture all_app_sectors %}{% for app in apps %}{{ app.sector }}|{% endfor %}{% endcapture %}
+    {% assign app_sectors = all_app_sectors | split: '|' | uniq | sort %}
+    <div class="post-tabs" role="tablist" aria-label="Filter apps by sector" data-app-filters>
+      <button class="post-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="app-list" data-app-filter="all">All apps</button>
+      {% for sector in app_sectors %}
+        {% assign sector_count = 0 %}
+        {% for app in apps %}
+          {% if app.sector == sector %}
+            {% assign sector_count = sector_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        <button class="post-tab" type="button" role="tab" aria-selected="false" aria-controls="app-list" data-app-filter="{{ sector | downcase | escape }}" data-app-count="{{ sector_count }}">{{ sector | escape }} ({{ sector_count }})</button>
+      {% endfor %}
+    </div>
+
     <div class="row row-cols-1 row-cols-md-2 g-4">
       {% for app in apps %}
-        <div class="col">
+        <div class="col" data-app-card data-app-sector="{{ app.sector | downcase | escape }}">
           <article class="post-card app-card h-100{% if app.thumbnail %} card-with-thumbnail{% endif %}">
             {% if app.thumbnail %}
               <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title }}" target="_blank" rel="noopener noreferrer">
@@ -34,6 +49,7 @@ permalink: /apps/
         </div>
       {% endfor %}
     </div>
+    <p class="post-filter-empty text-center mt-4 mb-0" data-app-empty hidden>No apps are listed in this sector yet.</p>
 
     <div class="row justify-content-center mt-5">
       <div class="col-lg-8">
@@ -47,3 +63,40 @@ permalink: /apps/
     </div>
   </div>
 </main>
+<script>
+  (function () {
+    const filters = document.querySelector('[data-app-filters]');
+    const cards = Array.from(document.querySelectorAll('[data-app-card]'));
+    const emptyMessage = document.querySelector('[data-app-empty]');
+
+    if (!filters) {
+      return;
+    }
+
+    const filterButtons = Array.from(filters.querySelectorAll('[data-app-filter]'));
+
+    filterButtons
+      .filter((filter) => filter.dataset.appFilter !== 'all')
+      .sort((first, second) => Number(second.dataset.appCount) - Number(first.dataset.appCount) || first.textContent.localeCompare(second.textContent))
+      .forEach((filter) => filters.append(filter));
+
+    filterButtons.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        const sector = filter.dataset.appFilter;
+        filterButtons.forEach((item) => {
+          const selected = item === filter;
+          item.classList.toggle('is-active', selected);
+          item.setAttribute('aria-selected', String(selected));
+        });
+
+        let visibleCount = 0;
+        cards.forEach((card) => {
+          const visible = sector === 'all' || card.dataset.appSector === sector;
+          card.hidden = !visible;
+          visibleCount += visible ? 1 : 0;
+        });
+        emptyMessage.hidden = visibleCount > 0;
+      });
+    });
+  }());
+</script>

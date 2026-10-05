@@ -2,6 +2,7 @@
 layout: post
 title: COVID-19 Dashboard
 description: Explore COVID-19 case data through interactive global, Canadian, and Alberta views.
+sector: Public health
 thumbnail: /assets/images/apps/covid-dashboard.png
 thumbnail_alt: COVID-19 dashboard chart comparing case trends across countries
 backlink: /apps/

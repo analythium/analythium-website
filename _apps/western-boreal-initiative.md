@@ -2,6 +2,7 @@
 layout: post
 title: Western Boreal Initiative — Full Extent
 description: Explore species abundance and landscape projections across the full Western Boreal region.
+sector: Wildlife conservation
 thumbnail: /assets/images/apps/wbi-full.png
 thumbnail_alt: Western Boreal Initiative interactive abundance map for the full region
 backlink: /apps/
