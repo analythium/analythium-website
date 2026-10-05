@@ -1,0 +1,31 @@
+{% assign matching_projects = site.projects | where_exp: 'project', "project.services contains include.service" | sort: 'date' | reverse | slice: 0, 4 %}
+{% if matching_projects.size > 0 %}
+<section class="recent-projects py-5 py-lg-6" aria-labelledby="{{ include.heading_id }}">
+  <div class="container">
+    <div class="section-heading text-center">
+      <p class="section-label mb-2">Selected work</p>
+      <h2 id="{{ include.heading_id }}">Projects in {{ include.service | escape }}</h2>
+    </div>
+    <div class="row g-4">
+      {% for project in matching_projects %}
+        <div class="col-md-6">
+          <article class="post-card card-with-thumbnail h-100">
+            <a class="card-thumbnail" href="{{ project.url | relative_url }}" aria-label="View {{ project.title | escape }}">
+              <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | default: project.title | escape }}" loading="lazy">
+            </a>
+            <div class="card-content p-4 p-lg-5">
+              {% if project.date %}<p class="post-meta mb-3">{{ project.date | date: "%B %Y" }}</p>{% endif %}
+              <h3 class="h3"><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></h3>
+              <p class="text-secondary mb-4">{{ project.summary | escape }}</p>
+              <a class="post-read-link" href="{{ project.url | relative_url }}">View project <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-5">
+      <a class="btn landing-secondary-action rounded-pill px-4" href="{{ '/projects/' | relative_url }}">View all projects</a>
+    </div>
+  </div>
+</section>
+{% endif %}
