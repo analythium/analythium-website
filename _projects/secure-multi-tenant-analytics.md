@@ -7,6 +7,7 @@ subtitle: Supported development of a secure, multi-user Shiny application for sc
 summary: Technical consulting and prototype work covered analysis, session storage, reporting, and cloud deployment for a Shiny application.
 thumbnail: https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&h=700&q=85
 thumbnail_alt: Laboratory glassware representing biomedical research
+client: alamar
 services:
   - Shiny application architecture
   - Multi-tenant data storage
@@ -22,6 +23,8 @@ Alamar Biosciences built an analysis software solution to empower their customer
 
 Analythium's team developed a prototype for a multi-tenant Shiny web application. The architecture included secure sign-in through an existing identity system, an extensible database model, and authorization for user data. Integration with an upstream data system depended on an API being made available, while application-generated files and results were to be stored separately.
 Analythium also contributed to interactive analysis features and user interface design.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kMO4MgPNCYw" title="Secure multi-tenant analytics application overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Our results
 

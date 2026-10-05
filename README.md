@@ -84,8 +84,9 @@ Projects:
 - Alamar: use SOW
 - WBI: use url https://wbi.predictiveecology.org/
 - Yukon, moosecounter: https://github.com/psolymos/moosecounter
-- Caribou
-- MTI/FMMN???
-- Air quality exploration & air quality index
 - BC Gov: shiny app, db
+
+- Caribou
+- Air quality exploration & air quality index
 - Stanford: scaling etc.
+- MTI/FMMN???

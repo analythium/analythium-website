@@ -31,7 +31,7 @@
   sector: Federal government and wildlife conservation
 
 - name: Biodiversity Pathways
-  data: biopat
+  data: biopath
   logo_path: /assets/images/clients/bio-path.jpg
   url: https://biodiversitypathways.ca/
   featured: no
