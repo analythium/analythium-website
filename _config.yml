@@ -26,3 +26,4 @@ collections:
     output: true
     permalink: /apps/:name/
 fathom_site_id: TSIFRZZM
+contact_embed: "yes"
