@@ -1,4 +1,4 @@
-<form class="contact-form" method="post" action="https://forms.reform.app/headless/analythium/contact/FB5Iji/submissions">
+<form class="contact-form" method="post" action="https://forms.reform.app/headless/analythium/contact/FB5Iji/submissions" data-recaptcha-site-key="{{ site.recaptcha_site_key | escape }}">
   <div class="row g-4">
     <div class="col-md-6">
       <label class="form-label" for="blk_name_iuxbxgukbo">What's your name? <span aria-hidden="true">*</span></label>
@@ -17,9 +17,78 @@
       <textarea id="blk_text_aohgu4o2zu" class="form-control" name="answers[blk_text_aohgu4o2zu]" placeholder="Your message" rows="6" required></textarea>
     </div>
     <input id="blk_hidden_lsrdmik1dk" type="hidden" name="answers[blk_hidden_lsrdmik1dk]" value="website">
+    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+    {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
+      <div id="contact-recaptcha" class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | escape }}" data-size="invisible"></div>
+    {% endif %}
     <div class="col-12">
       <button class="btn btn-warning rounded-pill px-4" type="submit">Send message</button>
     </div>
   </div>
   <p class="text-secondary small mt-3 mb-0">* Fields marked with an asterisk are required.</p>
+  <p class="text-danger small mt-2 mb-0" id="contact-form-status" role="status" aria-live="polite"></p>
 </form>
+
+{% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
+<script>
+  (() => {
+    const form = document.querySelector('.contact-form');
+    const submitButton = form.querySelector('[type="submit"]');
+    const tokenField = form.querySelector('#g-recaptcha-response');
+    const status = form.querySelector('#contact-form-status');
+    const siteKey = document.getElementById('contact-recaptcha').dataset.sitekey;
+    let widgetId = null;
+    let tokenReady = false;
+    let pendingSubmit = false;
+
+    const showVerificationError = () => {
+      pendingSubmit = false;
+      tokenReady = false;
+      tokenField.value = '';
+      submitButton.disabled = false;
+      status.textContent = 'We could not verify this submission. Please try again.';
+    };
+
+    window.onContactRecaptchaSuccess = (token) => {
+      tokenField.value = token;
+      tokenReady = true;
+      pendingSubmit = false;
+      submitButton.disabled = false;
+      form.requestSubmit(submitButton);
+    };
+
+    window.onContactRecaptchaExpired = showVerificationError;
+    window.onContactRecaptchaError = showVerificationError;
+
+    window.onContactRecaptchaApiLoaded = () => {
+      widgetId = window.grecaptcha.render('contact-recaptcha', {
+        sitekey: siteKey,
+        size: 'invisible',
+        callback: window.onContactRecaptchaSuccess,
+        'expired-callback': window.onContactRecaptchaExpired,
+        'error-callback': window.onContactRecaptchaError
+      });
+
+      if (pendingSubmit) window.grecaptcha.execute(widgetId);
+    };
+
+    form.addEventListener('submit', (event) => {
+      if (tokenReady) return;
+
+      event.preventDefault();
+      submitButton.disabled = true;
+      status.textContent = '';
+      pendingSubmit = true;
+
+      if (widgetId !== null) window.grecaptcha.execute(widgetId);
+    });
+
+    const recaptchaScript = document.createElement('script');
+    recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?onload=onContactRecaptchaApiLoaded&render=explicit';
+    recaptchaScript.async = true;
+    recaptchaScript.defer = true;
+    recaptchaScript.onerror = showVerificationError;
+    document.head.appendChild(recaptchaScript);
+  })();
+</script>
+{% endif %}

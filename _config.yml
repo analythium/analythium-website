@@ -26,4 +26,5 @@ collections:
     output: true
     permalink: /apps/:name/
 fathom_site_id: TSIFRZZM
-contact_embed: "yes"
+contact_embed: "no"
+recaptcha_site_key: "6LdfHu4tAAAAAHxLZCZuRMCTelRIMV47KlWMDxhJ"
