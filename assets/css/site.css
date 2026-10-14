@@ -685,6 +685,13 @@ a:focus {
   color: var(--site-text);
 }
 
+.contact-form .form-control::placeholder,
+.contact-form .form-control::-webkit-input-placeholder,
+.contact-form .form-control::-moz-placeholder {
+  color: var(--site-muted) !important;
+  opacity: 1;
+}
+
 .contact-form .form-control:focus {
   border-color: var(--site-accent);
   background: var(--site-panel-soft);
