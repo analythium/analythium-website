@@ -19,7 +19,9 @@
     <input id="blk_hidden_lsrdmik1dk" type="hidden" name="answers[blk_hidden_lsrdmik1dk]" value="website">
     <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
     {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
-      <div id="contact-recaptcha" class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | escape }}" data-size="invisible"></div>
+      <div class="col-12">
+        <div id="contact-recaptcha" class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | escape }}" data-size="invisible" data-badge="inline"></div>
+      </div>
     {% endif %}
     <div class="col-12">
       <button class="btn btn-warning rounded-pill px-4" type="submit">Send message</button>
@@ -64,6 +66,7 @@
       widgetId = window.grecaptcha.render('contact-recaptcha', {
         sitekey: siteKey,
         size: 'invisible',
+        badge: 'inline',
         callback: window.onContactRecaptchaSuccess,
         'expired-callback': window.onContactRecaptchaExpired,
         'error-callback': window.onContactRecaptchaError
