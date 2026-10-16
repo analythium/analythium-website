@@ -65,6 +65,12 @@ body {
   color: inherit;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.15em;
+  transition: color 150ms ease;
+}
+
+.site-announcement a:hover,
+.site-announcement a:focus-visible {
+  color: #89630a;
 }
 
 .site-announcement-close {
