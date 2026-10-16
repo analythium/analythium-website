@@ -327,7 +327,7 @@ a:focus {
 .landing-hero {
   position: relative;
   overflow: hidden;
-  padding: 7rem 0 7.5rem;
+  padding: 7rem 0 4rem;
   background: var(--hero-bg);
   text-align: center;
 }
@@ -852,7 +852,7 @@ a:focus {
   }
 
   .landing-hero {
-    padding: 5rem 0;
+    padding: 5rem 0 3rem;
   }
 
   .landing-hero-summary {
