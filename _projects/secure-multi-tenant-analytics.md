@@ -2,9 +2,9 @@
 layout: project
 backlink: /projects/
 featured: yes
-title: Secure Multi-tenant Analytics Application
-subtitle: Supported development of a secure, multi-user Shiny application for scientific data analysis.
-summary: Technical consulting and prototype work covered analysis, session storage, reporting, and cloud deployment for a Shiny application.
+title: Building a Secure Multi-user Platform for Scientific Analysis
+subtitle: Shiny application architecture for isolated user data, reliable reporting, and cloud deployment.
+summary: Technical consulting and prototype work covered scientific analysis workflows, session storage, reporting, and cloud deployment for a Shiny application.
 thumbnail: https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&h=700&q=85
 thumbnail_alt: Laboratory glassware representing biomedical research
 client: alamar

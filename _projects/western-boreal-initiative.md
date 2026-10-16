@@ -2,7 +2,7 @@
 layout: project
 backlink: /projects/
 featured: yes
-title: Western Boreal Initiative
+title: Forecasting Cumulative Effects Across Canada's Western Boreal
 subtitle: Integrating spatial forecasts to inform conservation and forest management across Canada's Western Boreal region.
 summary: A collaborative initiative that brought ecological models and large spatial datasets together to assess cumulative effects on forests, wildlife, and other values.
 thumbnail: https://raw.githubusercontent.com/PredictiveEcology/WBI_studyAreas/main/figures/WBI_studyArea_gg.png

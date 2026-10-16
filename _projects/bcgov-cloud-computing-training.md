@@ -2,8 +2,8 @@
 layout: project
 backlink: /projects/
 featured: yes
-title: Cloud Computing Training for Forest Analysis and Inventory
-subtitle: Building practical cloud, database, and RStudio capabilities for forest data teams.
+title: Building Cloud Capacity for Data Teams
+subtitle: Practical training in cloud infrastructure, databases, and RStudio for forest analysis and inventory.
 summary: Training and documentation helped the Government of British Columbia’s Forest Analysis and Inventory Branch set up, use, and maintain cloud infrastructure for spatial data and analysis.
 thumbnail: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&h=700&q=85
 thumbnail_alt: Cloud server racks and network cabling

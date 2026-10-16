@@ -2,9 +2,9 @@
 layout: project
 backlink: /projects/
 featured: yes
-title: Caribou Habitat Information Platform
-subtitle: Tracking disturbance and recovery across Woodland Caribou ranges.
-summary: A public data platform for exploring habitat condition and disturbance trends across woodland caribou ranges in western Canada.
+title: Measuring Caribou Habitat Disturbance and Recovery
+subtitle: Making habitat condition and disturbance trends accessible across Woodland Caribou ranges.
+summary: A public data platform that brings disturbance and recovery information together across woodland caribou ranges in western Canada.
 thumbnail: https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&h=700&q=85
 thumbnail_alt: Forest landscape representing woodland caribou habitat
 client: abmi

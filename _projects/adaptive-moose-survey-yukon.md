@@ -2,9 +2,9 @@
 layout: project
 backlink: /projects/
 featured: no
-title: Adaptive Moose Survey Design and Analysis
-subtitle: Using daily survey data to guide more informative surveys in the Yukon.
-summary: An adaptive sampling workflow and interactive R software supported spatial estimates of moose abundance and composition while targeting survey effort where predictions were most uncertain.
+title: Improving Moose Population Estimates Through Adaptive Surveys
+subtitle: Using daily survey data to focus field effort where predictions are most uncertain.
+summary: An adaptive sampling workflow and R software supported spatial estimates of moose abundance and composition while targeting survey effort where predictions were most uncertain.
 thumbnail: /assets/images/projects/moosecounter-multivariate-exploration.png
 thumbnail_alt: MooseCounter user interface with predictive map
 client: yukon-gov

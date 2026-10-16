@@ -2,10 +2,10 @@
 layout: project
 backlink: /projects/
 featured: no
-title: Interactive 3D Plot and Table Builder
+title: Comparing Contaminated-Site Data with Remediation Guidelines
 date: 2026-07-18
-summary: A practical 3D visualization tool that brings tabular site-management data into real time.
-subtitle: Turn site-management tables into an interactive 3D view.
+summary: A site-management tool for comparing soil and groundwater measurements with Alberta's Tier 1 remediation targets across locations and depth.
+subtitle: A linked table and 3D plot make site measurements easier to compare with target criteria.
 thumbnail: /assets/images/projects/tier1-3d-remediation-plot.png
 thumbnail_alt: 3D soil and groundwater sample plot with Tier 1 remediation risk categories
 app_url: https://hub.analythium.io/apps/plot3d/
