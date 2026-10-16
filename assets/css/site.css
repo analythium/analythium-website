@@ -774,6 +774,15 @@ a:focus {
   background: var(--site-panel);
 }
 
+:root[data-theme="dark"] .project-client-logo {
+  border-color: #d4d8dd;
+  background: #e9ecef;
+}
+
+.project-client-logo img {
+  filter: none;
+}
+
 .project-client img {
   display: block;
   width: auto;
