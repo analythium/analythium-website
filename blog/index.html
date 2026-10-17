@@ -15,18 +15,19 @@ permalink: /blog/
       </div>
     </div>
 
-    <div class="post-tabs" role="tablist" aria-label="Filter blog posts by topic" data-post-filters>
-      <button class="post-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="blog-post-list" data-post-filter="all">All posts</button>
+    <div class="post-tabs" role="group" aria-label="Filter blog posts by topic" data-post-filters>
+      <button class="post-tab is-active" type="button" aria-pressed="true" data-post-filter="all">All posts</button>
       {% assign sorted_tags = site.tags | sort %}
       {% for tag in sorted_tags %}
         {% assign tag_name = tag[0] %}
         {% assign tag_posts = tag[1] %}
-        <button class="post-tab" type="button" role="tab" aria-selected="false" aria-controls="blog-post-list" data-post-filter="{{ tag_name | downcase | escape }}" data-post-count="{{ tag_posts | size }}">{{ tag_name }} ({{ tag_posts | size }})</button>
+        <button class="post-tab" type="button" aria-pressed="false" data-post-filter="{{ tag_name | downcase | escape }}" data-post-count="{{ tag_posts | size }}">{{ tag_name }} ({{ tag_posts | size }})</button>
       {% endfor %}
     </div>
 
+    <p class="visually-hidden" data-blog-status role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="row justify-content-center">
-      <div id="blog-post-list" class="col-lg-8 blog-list" data-post-list role="tabpanel">
+      <div id="blog-post-list" class="col-lg-8 blog-list" data-post-list>
         {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
         {% for post in sorted_posts %}
           <article class="post-card card-with-thumbnail"{% if forloop.index > 6 %} hidden{% endif %} data-post-card data-post-tags="{{ post.tags | join: '|' | downcase | escape }}">
@@ -54,6 +55,7 @@ permalink: /blog/
   (function () {
     const button = document.querySelector('[data-show-more-posts]');
     const filters = document.querySelector('[data-post-filters]');
+    const status = document.querySelector('[data-blog-status]');
 
     if (!filters) {
       return;
@@ -83,7 +85,8 @@ permalink: /blog/
       });
 
       if (button) {
-        button.hidden = matches.length <= count;
+        button.disabled = matches.length <= count;
+        button.textContent = button.disabled ? 'All matching posts shown' : 'Show more posts';
       }
     }
 
@@ -92,14 +95,21 @@ permalink: /blog/
       filterButtons.forEach((item) => {
         const selected = item === filter;
         item.classList.toggle('is-active', selected);
-        item.setAttribute('aria-selected', String(selected));
+        item.setAttribute('aria-pressed', String(selected));
       });
       showCards(6);
+      const matches = matchingCards();
+      const visibleCount = Math.min(matches.length, 6);
+      status.textContent = visibleCount === 0
+        ? `No posts match ${filter.textContent.trim()}.`
+        : `Showing ${visibleCount} of ${matches.length} posts.`;
     }
 
     filterButtons.forEach((filter) => {
       filter.addEventListener('click', () => selectFilter(filter));
     });
+
+    showCards(6);
 
     if (!button) {
       return;
@@ -112,9 +122,11 @@ permalink: /blog/
         card.hidden = false;
       });
 
-      if (hiddenCards.length <= 6) {
-        button.hidden = true;
-      }
+      const matches = matchingCards();
+      const visibleCount = matches.filter((card) => !card.hidden).length;
+      button.disabled = hiddenCards.length <= 6;
+      button.textContent = button.disabled ? 'All matching posts shown' : 'Show more posts';
+      status.textContent = `Showing ${visibleCount} of ${matches.length} posts.`;
     });
   }());
 </script>

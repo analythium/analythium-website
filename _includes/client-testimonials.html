@@ -21,15 +21,16 @@
             {% endfor %}
           {% endif %}
           {% if include_client %}
-            <a href="{{ client.url | escape }}" target="_blank" rel="noopener noreferrer" data-client="{{ client.data | escape }}">
+            <a href="{{ client.url | escape }}" target="_blank" rel="noopener noreferrer" data-client="{{ client.data | escape }}" aria-label="Visit {{ client.name | escape }} website (opens in a new tab)">
               <img src="{{ client.logo_path | relative_url }}" alt="{{ client.name | escape }} logo" width="180" height="48" loading="lazy">
+              <span class="visually-hidden">(opens in a new tab)</span>
             </a>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-    <div class="testimonial-carousel" data-testimonial-carousel>
-      <div class="testimonial-track" aria-label="Client testimonials" tabindex="0">
+    <div class="testimonial-carousel" data-testimonial-carousel role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+      <div class="testimonial-track" role="group" aria-label="Client testimonial slides" tabindex="0">
         {% for testimonial in site.data.testimonials %}
           {% assign include_testimonial = false %}
           {% if requested_services == nil or requested_services == empty %}
@@ -44,7 +45,7 @@
             {% endfor %}
           {% endif %}
           {% if include_testimonial %}
-            <div class="testimonial-slide" data-testimonial="{{ testimonial.data | escape }}">
+            <div class="testimonial-slide" data-testimonial="{{ testimonial.data | escape }}" role="group" aria-roledescription="slide" aria-label="Testimonial {{ forloop.index }}">
               <figure class="testimonial h-100 mb-0">
                 <blockquote>“{{ testimonial.testimonial | escape }}”</blockquote>
                 <figcaption><strong>{{ testimonial.contact_name | escape }}</strong><span>{{ testimonial.affiliation | escape }}</span></figcaption>
@@ -80,23 +81,24 @@
     const next = carousel.querySelector('[data-testimonial-next]');
 
     function updateControls() {
-      const hasOverflow = slides.length > 3 && track.scrollWidth > track.clientWidth;
+      const hasOverflow = track.scrollWidth > track.clientWidth + 1;
       controls.hidden = !hasOverflow;
     }
 
     function scrollTestimonials(direction) {
       const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
       const distance = slides[0].getBoundingClientRect().width + gap;
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
       const edgeThreshold = 8;
       const atStart = track.scrollLeft <= edgeThreshold;
       const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - edgeThreshold;
 
       if (direction > 0 && atEnd) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
+        track.scrollTo({ left: 0, behavior });
       } else if (direction < 0 && atStart) {
-        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+        track.scrollTo({ left: track.scrollWidth, behavior });
       } else {
-        track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+        track.scrollBy({ left: direction * distance, behavior });
       }
     }
 

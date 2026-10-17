@@ -84,15 +84,16 @@ thumbnail: /assets/images/landing-page-thumbnail.png
         <p class="section-label mb-2">The latest</p>
         <h2 id="latest-heading">From the blog</h2>
       </div>
-      <div class="post-tabs" role="tablist" aria-label="Filter blog posts by topic">
-        <button class="post-tab is-active" type="button" role="tab" aria-selected="true" data-tag="all">All posts</button>
+      <div class="post-tabs" role="group" aria-label="Filter blog posts by topic">
+        <button class="post-tab is-active" type="button" aria-pressed="true" data-tag="all">All posts</button>
         {% assign sorted_tags = site.tags | sort %}
         {% for tag in sorted_tags %}
           {% assign tag_name = tag[0] %}
-          <button class="post-tab" type="button" role="tab" aria-selected="false" data-tag="{{ tag_name | downcase | escape }}">{{ tag_name | escape }}</button>
+          <button class="post-tab" type="button" aria-pressed="false" data-tag="{{ tag_name | downcase | escape }}">{{ tag_name | escape }}</button>
         {% endfor %}
       </div>
-      <div id="post-grid" class="row g-4" role="tabpanel">
+      <p class="visually-hidden" data-home-filter-status role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="post-grid" class="row g-4">
         {% assign recent_posts = site.posts | sort: 'date' | reverse %}
         {% for post in recent_posts %}
           <div class="col-md-6 post-entry" data-tags="{{ post.tags | join: '|' | downcase }}"{% if forloop.index > 4 %} hidden{% endif %}>
@@ -126,6 +127,7 @@ thumbnail: /assets/images/landing-page-thumbnail.png
     const tabs = document.querySelectorAll('.post-tab');
     const entries = document.querySelectorAll('.post-entry');
     const emptyMessage = document.querySelector('.post-filter-empty');
+    const status = document.querySelector('[data-home-filter-status]');
 
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
@@ -135,7 +137,7 @@ thumbnail: /assets/images/landing-page-thumbnail.png
         tabs.forEach((item) => {
           const selected = item === tab;
           item.classList.toggle('is-active', selected);
-          item.setAttribute('aria-selected', String(selected));
+          item.setAttribute('aria-pressed', String(selected));
         });
 
         entries.forEach((entry) => {
@@ -148,6 +150,9 @@ thumbnail: /assets/images/landing-page-thumbnail.png
         });
 
         emptyMessage.hidden = matchingCount > 0;
+        status.textContent = matchingCount === 0
+          ? `No articles in ${tag === 'all' ? 'all topics' : `the ${tab.textContent.trim()} topic`}.`
+          : `Showing ${Math.min(matchingCount, 4)} of ${matchingCount} articles.`;
       });
     });
   }());
@@ -173,16 +178,17 @@ thumbnail: /assets/images/landing-page-thumbnail.png
     function scrollTestimonials(direction) {
       const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
       const distance = slides[0].getBoundingClientRect().width + gap;
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
       const edgeThreshold = 8;
       const atStart = track.scrollLeft <= edgeThreshold;
       const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - edgeThreshold;
 
       if (direction > 0 && atEnd) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
+        track.scrollTo({ left: 0, behavior });
       } else if (direction < 0 && atStart) {
-        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+        track.scrollTo({ left: track.scrollWidth, behavior });
       } else {
-        track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+        track.scrollBy({ left: direction * distance, behavior });
       }
     }
 

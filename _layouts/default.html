@@ -4,6 +4,7 @@
     {% include meta.html %}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     {% if site.announcement.enabled and site.announcement.text %}
       <aside class="site-announcement" data-announcement data-announcement-id="{{ site.announcement.id | default: 'site-announcement' }}" aria-label="Site announcement">
         <div class="container site-announcement-content">
@@ -21,7 +22,9 @@
     {% endif %}
     {% include header.html %}
 
-    {{ content }}
+    <div id="main-content" tabindex="-1">
+      {{ content }}
+    </div>
 
     {% include footer.html %}
 
@@ -34,8 +37,11 @@
         function updateTheme(theme) {
           const isLight = theme === 'light';
           root.dataset.theme = theme;
-          localStorage.setItem('theme', theme);
-          themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+          try {
+            localStorage.setItem('theme', theme);
+          } catch (error) {
+            // Keep the selected theme for this page if storage is unavailable.
+          }
           themeToggle.setAttribute('aria-pressed', String(isLight));
           document.querySelectorAll('.site-logo').forEach((logo) => {
             logo.src = isLight ? logo.dataset.lightLogo : logo.dataset.darkLogo;
@@ -69,6 +75,7 @@
 
         announcement.querySelector('[data-announcement-close]').addEventListener('click', () => {
           announcement.hidden = true;
+          document.querySelector('.navbar-brand')?.focus();
 
           try {
             localStorage.setItem(storageKey, 'true');

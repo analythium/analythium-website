@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="{{ '/' | relative_url }}">
+    <a class="navbar-brand d-flex align-items-center gap-3 fw-semibold" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>
       <img class="site-logo" src="{{ '/assets/images/logo-white.svg' | relative_url }}" data-dark-logo="{{ '/assets/images/logo-white.svg' | relative_url }}" data-light-logo="{{ '/assets/images/logo.svg' | relative_url }}" alt="Analythium logo" width="36" height="32">
       <span>{{ site.title }}</span>
     </a>
@@ -12,17 +12,17 @@
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle{% if page.url contains '/services/' %} active{% endif %}" type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item{% if page.url == '/services/data-science/' %} active{% endif %}" href="{{ '/services/data-science/' | relative_url }}">Data science</a></li>
-            <li><a class="dropdown-item{% if page.url == '/services/engineering/' %} active{% endif %}" href="{{ '/services/engineering/' | relative_url }}">Engineering</a></li>
-            <li><a class="dropdown-item{% if page.url == '/services/training/' %} active{% endif %}" href="{{ '/services/training/' | relative_url }}">Training</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/data-science/' %} active{% endif %}" href="{{ '/services/data-science/' | relative_url }}"{% if page.url == '/services/data-science/' %} aria-current="page"{% endif %}>Data science</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/engineering/' %} active{% endif %}" href="{{ '/services/engineering/' | relative_url }}"{% if page.url == '/services/engineering/' %} aria-current="page"{% endif %}>Engineering</a></li>
+            <li><a class="dropdown-item{% if page.url == '/services/training/' %} active{% endif %}" href="{{ '/services/training/' | relative_url }}"{% if page.url == '/services/training/' %} aria-current="page"{% endif %}>Training</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link{% if page.url contains '/projects/' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a></li>
-        <li class="nav-item"><a class="nav-link{% if page.url contains '/apps/' %} active{% endif %}" href="{{ '/apps/' | relative_url }}">Apps</a></li>
-        <li class="nav-item"><a class="nav-link{% if page.url contains '/blog/' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a></li>
-        <li class="nav-item"><a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url contains '/projects/' %} active{% endif %}" href="{{ '/projects/' | relative_url }}"{% if page.url contains '/projects/' %} aria-current="{% if page.url == '/projects/' %}page{% else %}location{% endif %}"{% endif %}>Projects</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url contains '/apps/' %} active{% endif %}" href="{{ '/apps/' | relative_url }}"{% if page.url contains '/apps/' %} aria-current="{% if page.url == '/apps/' %}page{% else %}location{% endif %}"{% endif %}>Apps</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url contains '/blog/' %} active{% endif %}" href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="{% if page.url == '/blog/' %}page{% else %}location{% endif %}"{% endif %}>Blog</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
         <li class="nav-item ms-lg-3">
-          <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
             <span class="theme-toggle-icon" aria-hidden="true">
               <svg class="theme-toggle-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
             </span>

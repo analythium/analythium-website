@@ -18,8 +18,8 @@ permalink: /apps/
     {% assign apps = site.apps | sort: 'title' %}
     {% capture all_app_sectors %}{% for app in apps %}{{ app.sector }}|{% endfor %}{% endcapture %}
     {% assign app_sectors = all_app_sectors | split: '|' | uniq | sort %}
-    <div class="post-tabs" role="tablist" aria-label="Filter apps by sector" data-app-filters>
-      <button class="post-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="app-list" data-app-filter="all">All apps</button>
+    <div class="post-tabs" role="group" aria-label="Filter apps by sector" data-app-filters>
+      <button class="post-tab is-active" type="button" aria-pressed="true" data-app-filter="all">All apps</button>
       {% for sector in app_sectors %}
         {% assign sector_count = 0 %}
         {% for app in apps %}
@@ -27,23 +27,24 @@ permalink: /apps/
             {% assign sector_count = sector_count | plus: 1 %}
           {% endif %}
         {% endfor %}
-        <button class="post-tab" type="button" role="tab" aria-selected="false" aria-controls="app-list" data-app-filter="{{ sector | downcase | escape }}" data-app-count="{{ sector_count }}">{{ sector | escape }} ({{ sector_count }})</button>
+        <button class="post-tab" type="button" aria-pressed="false" data-app-filter="{{ sector | downcase | escape }}" data-app-count="{{ sector_count }}">{{ sector | escape }} ({{ sector_count }})</button>
       {% endfor %}
     </div>
 
+    <p class="visually-hidden" data-app-status role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="row row-cols-1 row-cols-md-2 g-4">
       {% for app in apps %}
         <div class="col" data-app-card data-app-sector="{{ app.sector | downcase | escape }}">
           <article class="post-card app-card h-100{% if app.thumbnail %} card-with-thumbnail{% endif %}">
             {% if app.thumbnail %}
-              <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title }}" target="_blank" rel="noopener noreferrer">
+              <a class="card-thumbnail" href="{{ app.url | relative_url }}" aria-label="Open {{ app.title | escape }} (opens in a new tab)" target="_blank" rel="noopener noreferrer">
                 <img src="{{ app.thumbnail | relative_url }}" alt="{{ app.thumbnail_alt | default: app.title }}" loading="lazy">
               </a>
             {% endif %}
             <div class="card-content p-4 p-md-5">
-              <h2 class="h3 mb-3"><a href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ app.title }}</a></h2>
+              <h2 class="h3 mb-3"><a href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ app.title }} <span class="visually-hidden">(opens in a new tab)</span></a></h2>
               <p class="text-secondary mb-4">{{ app.description }}</p>
-              <a class="btn btn-outline-light rounded-pill px-4" href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">Open app</a>
+              <a class="btn btn-outline-light rounded-pill px-4" href="{{ app.url | relative_url }}" target="_blank" rel="noopener noreferrer">Open app<span class="visually-hidden"> {{ app.title | escape }} (opens in a new tab)</span></a>
             </div>
           </article>
         </div>
@@ -68,6 +69,7 @@ permalink: /apps/
     const filters = document.querySelector('[data-app-filters]');
     const cards = Array.from(document.querySelectorAll('[data-app-card]'));
     const emptyMessage = document.querySelector('[data-app-empty]');
+    const status = document.querySelector('[data-app-status]');
 
     if (!filters) {
       return;
@@ -86,7 +88,7 @@ permalink: /apps/
         filterButtons.forEach((item) => {
           const selected = item === filter;
           item.classList.toggle('is-active', selected);
-          item.setAttribute('aria-selected', String(selected));
+          item.setAttribute('aria-pressed', String(selected));
         });
 
         let visibleCount = 0;
@@ -96,6 +98,9 @@ permalink: /apps/
           visibleCount += visible ? 1 : 0;
         });
         emptyMessage.hidden = visibleCount > 0;
+        status.textContent = visibleCount === 0
+          ? `No apps are listed in ${filter.textContent.trim()}.`
+          : `Showing ${visibleCount} ${visibleCount === 1 ? 'app' : 'apps'} for ${filter.textContent.trim()}.`;
       });
     });
   }());

@@ -20,8 +20,8 @@ permalink: /projects/
     {% assign other_projects = projects | where: 'featured', false %}
     {% capture all_project_services %}{% for project in projects %}{% for service in project.services %}{{ service }}|{% endfor %}{% endfor %}{% endcapture %}
     {% assign project_services = all_project_services | split: '|' | uniq | sort %}
-    <div class="post-tabs" role="tablist" aria-label="Filter projects by service" data-project-filters>
-      <button class="post-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="project-list" data-project-filter="all">All projects</button>
+    <div class="post-tabs" role="group" aria-label="Filter projects by service" data-project-filters>
+      <button class="post-tab is-active" type="button" aria-pressed="true" data-project-filter="all">All projects</button>
       {% for service in project_services %}
         {% assign service_count = 0 %}
         {% for project in projects %}
@@ -29,12 +29,12 @@ permalink: /projects/
             {% assign service_count = service_count | plus: 1 %}
           {% endif %}
         {% endfor %}
-        <button class="post-tab" type="button" role="tab" aria-selected="false" aria-controls="project-list" data-project-filter="{{ service | downcase | escape }}" data-project-count="{{ service_count }}">{{ service | escape }} ({{ service_count }})</button>
+        <button class="post-tab" type="button" aria-pressed="false" data-project-filter="{{ service | downcase | escape }}" data-project-count="{{ service_count }}">{{ service | escape }} ({{ service_count }})</button>
       {% endfor %}
     </div>
 
     <div class="row justify-content-center">
-      <div id="project-list" class="col-lg-8 blog-list" role="tabpanel" data-project-list>
+      <div id="project-list" class="col-lg-8 blog-list" data-project-list>
         <!-- {% if featured_projects.size > 0 %}
           <h2 class="h3 mb-4">Featured projects</h2>
         {% endif %} -->
@@ -69,6 +69,7 @@ permalink: /projects/
         {% endfor %}
       </div>
     </div>
+    <p class="visually-hidden" data-project-status role="status" aria-live="polite" aria-atomic="true"></p>
     <p class="post-filter-empty text-center mt-4 mb-0" data-project-empty hidden>No projects match this service yet.</p>
 
     <div class="row justify-content-center mt-5">
@@ -88,6 +89,7 @@ permalink: /projects/
     const filters = document.querySelector('[data-project-filters]');
     const cards = Array.from(document.querySelectorAll('[data-project-card]'));
     const emptyMessage = document.querySelector('[data-project-empty]');
+    const status = document.querySelector('[data-project-status]');
 
     if (!filters) {
       return;
@@ -107,7 +109,7 @@ permalink: /projects/
         filterButtons.forEach((item) => {
           const selected = item === filter;
           item.classList.toggle('is-active', selected);
-          item.setAttribute('aria-selected', String(selected));
+          item.setAttribute('aria-pressed', String(selected));
         });
 
         let visibleCount = 0;
@@ -117,6 +119,9 @@ permalink: /projects/
           visibleCount += visible ? 1 : 0;
         });
         emptyMessage.hidden = visibleCount > 0;
+        status.textContent = visibleCount === 0
+          ? `No projects match ${filter.textContent.trim()}.`
+          : `Showing ${visibleCount} ${visibleCount === 1 ? 'project' : 'projects'} for ${filter.textContent.trim()}.`;
       });
     });
   }());
