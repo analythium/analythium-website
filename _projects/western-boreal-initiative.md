@@ -27,7 +27,7 @@ Analythium compiled and organized summaries from forecasts across the study area
 
 A pilot produced a web application that showcased Western Boreal Initiative data products for the Northwest Territories. The subsequent extension defined work to extend that foundation across the broader Western Boreal study area and make forecast summaries accessible through a web interface.
 
-The initiative’s outputs were intended to support multi-species conservation planning and help users examine trade-offs among ecological and socioeconomic values, consistent with the stated goal of public data access.
+The initiative's outputs were intended to support multi-species conservation planning and help users examine trade-offs among ecological and socioeconomic values, consistent with the stated goal of public data access.
 
 See the following links for the interactive applications that were developed to support the Western Boreal Initiative:
 

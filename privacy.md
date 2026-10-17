@@ -10,7 +10,7 @@ Analythium Solutions Inc. (“Analythium”, “we”, “us” or “our”) op
 
 ## Information you provide
 
-If you contact us through the website form, you may provide your name, email address, company, and message. The form is hosted and processed by Reform; information you submit is sent to Reform and made available to us so we can respond to your inquiry. Please review [Reform’s privacy information](https://www.reform.app/privacy) for its handling of submitted data.
+If you contact us through the website form, you may provide your name, email address, company, and message. The form is hosted and processed by Reform; information you submit is sent to Reform and made available to us so we can respond to your inquiry. Please review [Reform's privacy information](https://www.reform.app/privacy) for its handling of submitted data.
 
 Please do not send sensitive personal information through the contact form unless we have agreed on an appropriate secure method.
 
@@ -18,7 +18,7 @@ Please do not send sensitive personal information through the contact form unles
 
 This website uses browser local storage to remember your selected display theme and whether you dismissed the announcement banner. These preferences are stored in your browser and are not used by this site to identify you.
 
-Our current shared metadata template does not load an analytics script. The infrastructure that serves the site or third-party resources embedded on a page may process technical information, such as a request’s IP address, to deliver, protect, or troubleshoot those services. Their own privacy policies apply to that processing.
+Our current shared metadata template does not load an analytics script. The infrastructure that serves the site or third-party resources embedded on a page may process technical information, such as a request's IP address, to deliver, protect, or troubleshoot those services. Their own privacy policies apply to that processing.
 
 ## How we use information
 

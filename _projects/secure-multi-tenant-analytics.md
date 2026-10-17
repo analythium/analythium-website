@@ -15,7 +15,7 @@ services:
 
 ## Motivation
 
-Alamar Biosciences built an analysis software solution to empower their customers with scalable proteomic analysis capabilities. Research teams working with instrument-generated datasets needed to analyze multiple sessions while keeping each user’s saved data and results appropriately isolated. They also needed dependable report exports and an operational foundation that could evolve with changing requirements.
+Alamar Biosciences built an analysis software solution to empower their customers with scalable proteomic analysis capabilities. Research teams working with instrument-generated datasets needed to analyze multiple sessions while keeping each user's saved data and results appropriately isolated. They also needed dependable report exports and an operational foundation that could evolve with changing requirements.
 
 ## The project
 

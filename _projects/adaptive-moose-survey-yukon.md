@@ -23,7 +23,7 @@ The surveys covered large remote areas by helicopter, making fieldwork expensive
 
 Analythium in collaboration with Yukon biologists developed an interactive software package called [MooseCounter](https://github.com/psolymos/moosecounter) to support model fitting and prediction for total abundance and population composition, alongside data filtering, exploration, diagnostics, and survey planning. This enabled researchers and field biologists to review results and adapt sampling as data arrived.
 
-An adaptive sequential sampling strategy combined expert knowledge, environmental covariates, and results from earlier surveys to guide field effort. Initial survey units were selected across high- and low-density strata. After each day of observations, the tool was used to estimate moose abundance and prediction uncertainty for unsurveyed units. The next day’s helicopter routes could then prioritize units with the greatest prediction uncertainty, repeating the cycle until the desired level of precision was reached.
+An adaptive sequential sampling strategy combined expert knowledge, environmental covariates, and results from earlier surveys to guide field effort. Initial survey units were selected across high- and low-density strata. After each day of observations, the tool was used to estimate moose abundance and prediction uncertainty for unsurveyed units. The next day's helicopter routes could then prioritize units with the greatest prediction uncertainty, repeating the cycle until the desired level of precision was reached.
 
 ## Our results
 

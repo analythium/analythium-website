@@ -4,7 +4,7 @@ backlink: /projects/
 featured: yes
 title: Building Cloud Capacity for Data Teams
 subtitle: Practical training in cloud infrastructure, databases, and RStudio for forest analysis and inventory.
-summary: Training and documentation helped the Government of British Columbia’s Forest Analysis and Inventory Branch set up, use, and maintain cloud infrastructure for spatial data and analysis.
+summary: Training and documentation helped the Government of British Columbia's Forest Analysis and Inventory Branch set up, use, and maintain cloud infrastructure for spatial data and analysis.
 thumbnail: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&h=700&q=85
 thumbnail_alt: Cloud server racks and network cabling
 client: bc-gov
@@ -16,7 +16,7 @@ services:
 
 ## Motivation
 
-The Government of British Columbia’s Forest Analysis and Inventory Branch (FAIB) needed practical experience with Canadian-based cloud infrastructure to support its data storage and analysis work. The team wanted to assess suitable infrastructure specifications, work with large spatial datasets, and build the skills to set up, maintain, and use cloud servers with minimal ongoing support.
+The Government of British Columbia's Forest Analysis and Inventory Branch (FAIB) needed practical experience with Canadian-based cloud infrastructure to support its data storage and analysis work. The team wanted to assess suitable infrastructure specifications, work with large spatial datasets, and build the skills to set up, maintain, and use cloud servers with minimal ongoing support.
 
 ## The project
 
@@ -26,6 +26,6 @@ The work included setting up a private GitHub repository for training documentat
 
 ## Our results
 
-FAIB received training on accessing and testing cloud servers, including transferring large spatial datasets, and R Markdown-based documentation for setting up, maintaining, and using the environment. Two similarly configured PostgreSQL/PostGIS database servers supported the FAIB and CCISS data and user groups. These activities strengthened the branch’s ability to incorporate cloud computing into their data workflows.
+FAIB received training on accessing and testing cloud servers, including transferring large spatial datasets, and R Markdown-based documentation for setting up, maintaining, and using the environment. Two similarly configured PostgreSQL/PostGIS database servers supported the FAIB and CCISS data and user groups. These activities strengthened the branch's ability to incorporate cloud computing into their data workflows.
 
 - [Climate Change Informed Species Selection (CCISS) Shiny app](https://thebeczone.ca/shiny/ccissdev/)

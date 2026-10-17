@@ -20,7 +20,7 @@ Applied statistics increasingly needs software that makes analytical results reu
 
 ## The project
 
-At the Statistical Society of Canada’s 2022 Annual Meeting, Analythium's team delivered a six-hour accreditation workshop titled “Delivering applied statistics from concept to production.”
+At the Statistical Society of Canada's 2022 Annual Meeting, Analythium's team delivered a six-hour accreditation workshop titled “Delivering applied statistics from concept to production.”
 
 The workshop covered shaping a question and dataset into a modeling workflow; building command-line interfaces and prototypes; deploying applications to cloud-hosted virtual machines; and improving performance by separating application logic from its presentation layer.
 
