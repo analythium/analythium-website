@@ -24,8 +24,6 @@ The Caribou Habitat Information Platform was a two-year effort to build on previ
 
 The interface was designed to display Caribou ranges on a map and, for a selected range, report disturbance statistics and interactive charts. Users could explore results using configurable disturbance thresholds and review the composition of disturbance types.
 
-https://youtu.be/j5qOMsy_omg
-
 <iframe width="1013" height="633" src="https://www.youtube.com/embed/j5qOMsy_omg" title="Webinar: Tracking Change Across Caribou Ranges: Introducing the Caribou Habitat Information Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Our results
