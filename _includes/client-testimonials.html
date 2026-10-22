@@ -7,6 +7,7 @@
     </div>
     <div class="featured-strip testimonials-featured">
       <div class="client-logos">
+        {% assign seen_client_logos = "|" %}
         {% for client in site.data.clients %}
           {% assign include_client = false %}
           {% if requested_services == nil or requested_services == empty %}
@@ -20,11 +21,15 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-          {% if include_client %}
-            <a href="{{ client.url | escape }}" target="_blank" rel="noopener noreferrer" data-client="{{ client.data | escape }}" aria-label="Visit {{ client.name | escape }} website (opens in a new tab)">
-              <img src="{{ client.logo_path | relative_url }}" alt="{{ client.name | escape }} logo" width="180" height="48" loading="lazy">
-              <span class="visually-hidden">(opens in a new tab)</span>
-            </a>
+          {% assign logo_token = "|" | append: client.logo_path | append: "|" %}
+          {% if include_client and client.logo_path and client.logo_path != "" %}
+            {% unless seen_client_logos contains logo_token %}
+              <a href="{{ client.url | escape }}" target="_blank" rel="noopener noreferrer" data-client="{{ client.data | escape }}" aria-label="Visit {{ client.name | escape }} website (opens in a new tab)">
+                <img src="{{ client.logo_path | relative_url }}" alt="{{ client.name | escape }} logo" width="180" height="48" loading="lazy">
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+              {% assign seen_client_logos = seen_client_logos | append: client.logo_path | append: "|" %}
+            {% endunless %}
           {% endif %}
         {% endfor %}
       </div>
