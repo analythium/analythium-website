@@ -22,7 +22,7 @@ Alamar Biosciences built an analysis software solution to empower their customer
 Analythium's team developed a prototype for a multi-tenant Shiny web application. The architecture included secure sign-in through an existing identity system, an extensible database model, and authorization for user data. Integration with an upstream data system depended on an API being made available, while application-generated files and results were to be stored separately.
 Analythium also contributed to interactive analysis features and user interface design.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kMO4MgPNCYw" title="Secure multi-tenant analytics application overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1013" height="633" src="https://www.youtube-nocookie.com/embed/kMO4MgPNCYw" title="Secure multi-tenant analytics application overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Our results
 
