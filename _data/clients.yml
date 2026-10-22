@@ -86,13 +86,13 @@
   services: ["engineering", "training"]
   sector: Provincial government
 
-# - name: FastR&D LLC
-#   data: fastrnd
-#   logo_path: /assets/images/clients/fastrnd.png
-#   url: https://www.fastrnd.com/
-#   featured: no
-#   services: ["engineering", "training"]
-#   sector: Chemical and pharmaceutical research
+- name: FastR&D LLC
+  data: fastrnd
+  logo_path: /assets/images/clients/fastrnd.png
+  url: https://www.fastrnd.com/
+  featured: yes
+  services: ["engineering", "training"]
+  sector: Chemical and pharmaceutical research
 
 - name: Campbell & Company
   data: campbell-co
