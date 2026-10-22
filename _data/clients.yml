@@ -56,7 +56,7 @@
 
 - name: Ketchbrook Analytics
   data: ketchbrook
-  logo_path: /assets/images/clients/ketchbrook.jpg
+  logo_path: /assets/images/clients/ketchbrook.png
   url: https://ketchbrookanalytics.com/
   featured: yes
   services: ["data-science", "engineering"]
