@@ -138,7 +138,7 @@
   data: attalitech
   logo_path: /assets/images/clients/attalitech.png
   url: https://attalitech.com/
-  featured: no
+  featured: yes
   services: ["engineering"]
   sector: Technology consulting
 
