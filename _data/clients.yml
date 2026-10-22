@@ -10,7 +10,7 @@
   data: lactanet
   logo_path: /assets/images/clients/lactanet.png
   url: https://lactanet.ca/en/
-  featured: no
+  featured: yes
   services: ["engineering"]
   sector: Dairy and agriculture
 
@@ -50,7 +50,7 @@
   data: fusion92
   logo_path: /assets/images/clients/fusion92.png
   url: https://www.fusion92.com/
-  featured: no
+  featured: yes
   services: ["engineering"]
   sector: Marketing
 
@@ -58,7 +58,7 @@
   data: ketchbrook
   logo_path: /assets/images/clients/ketchbrook.jpg
   url: https://ketchbrookanalytics.com/
-  featured: no
+  featured: yes
   services: ["data-science", "engineering"]
   sector: Data analytics consulting
 
