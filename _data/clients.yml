@@ -134,13 +134,13 @@
   services: ["data-science", "engineering"]
   sector: Biotechnology
 
-# - name: AttaliTech
-#   data: attalitech
-#   logo_path: /assets/images/clients/attalitech.png
-#   url: https://attalitech.com/
-#   featured: no
-#   services: ["data-science", "engineering", "training"]
-#   sector: Technology consulting
+- name: AttaliTech
+  data: attalitech
+  logo_path: /assets/images/clients/attalitech.png
+  url: https://attalitech.com/
+  featured: no
+  services: ["engineering"]
+  sector: Technology consulting
 
 - name: Statistical Society of Canada
   data: ssc
