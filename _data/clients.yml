@@ -94,13 +94,13 @@
 #   services: ["engineering", "training"]
 #   sector: Chemical and pharmaceutical research
 
-# - name: Campbell & Company
-#   data: campbell-co
-#   logo_path: /assets/images/clients/campbell-company.png
-#   url: https://www.campbellcompany.com/
-#   featured: no
-#   services: ["engineering"]
-#   sector: Nonprofit and charitable organizations
+- name: Campbell & Company
+  data: campbell-co
+  logo_path: /assets/images/clients/campbell-company.png
+  url: https://www.campbellcompany.com/
+  featured: yes
+  services: ["engineering"]
+  sector: Nonprofit and charitable organizations
 
 # - name: ZevRoss Spatial Analysis
 #   data: zevross
