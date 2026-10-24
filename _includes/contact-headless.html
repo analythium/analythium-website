@@ -17,10 +17,9 @@
       <textarea id="blk_text_aohgu4o2zu" class="form-control" name="answers[blk_text_aohgu4o2zu]" placeholder="Your message" rows="6" required></textarea>
     </div>
     <input id="blk_hidden_lsrdmik1dk" type="hidden" name="answers[blk_hidden_lsrdmik1dk]" value="website">
-    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
     {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
       <div class="col-12">
-        <div id="contact-recaptcha" class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | escape }}" data-size="invisible" data-badge="inline"></div>
+        <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | escape }}" data-callback="onContactRecaptchaSuccess" data-expired-callback="onContactRecaptchaExpired" data-error-callback="onContactRecaptchaError"></div>
       </div>
     {% endif %}
     <div class="col-12">
@@ -35,62 +34,34 @@
 <script>
   (() => {
     const form = document.querySelector('.contact-form');
-    const submitButton = form.querySelector('[type="submit"]');
-    const tokenField = form.querySelector('#g-recaptcha-response');
     const status = form.querySelector('#contact-form-status');
-    const siteKey = document.getElementById('contact-recaptcha').dataset.sitekey;
-    let widgetId = null;
-    let tokenReady = false;
-    let pendingSubmit = false;
-
     const showVerificationError = () => {
-      pendingSubmit = false;
-      tokenReady = false;
-      tokenField.value = '';
-      submitButton.disabled = false;
-      status.textContent = 'We could not verify this submission. Please try again.';
+      status.textContent = 'We could not verify this submission. Please complete the reCAPTCHA challenge and try again.';
     };
 
-    window.onContactRecaptchaSuccess = (token) => {
-      tokenField.value = token;
-      tokenReady = true;
-      pendingSubmit = false;
-      submitButton.disabled = false;
-      form.requestSubmit(submitButton);
+    window.onContactRecaptchaSuccess = () => {
+      status.textContent = '';
     };
-
     window.onContactRecaptchaExpired = showVerificationError;
     window.onContactRecaptchaError = showVerificationError;
 
-    window.onContactRecaptchaApiLoaded = () => {
-      widgetId = window.grecaptcha.render('contact-recaptcha', {
-        sitekey: siteKey,
-        size: 'invisible',
-        badge: 'inline',
-        callback: window.onContactRecaptchaSuccess,
-        'expired-callback': window.onContactRecaptchaExpired,
-        'error-callback': window.onContactRecaptchaError
-      });
-
-      if (pendingSubmit) window.grecaptcha.execute(widgetId);
-    };
-
     form.addEventListener('submit', (event) => {
-      if (tokenReady) return;
+      if (window.grecaptcha && window.grecaptcha.getResponse()) {
+        status.textContent = '';
+        return;
+      }
 
       event.preventDefault();
-      submitButton.disabled = true;
-      status.textContent = '';
-      pendingSubmit = true;
-
-      if (widgetId !== null) window.grecaptcha.execute(widgetId);
+      status.textContent = 'Please complete the reCAPTCHA checkbox before submitting.';
     });
 
     const recaptchaScript = document.createElement('script');
-    recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?onload=onContactRecaptchaApiLoaded&render=explicit';
+    recaptchaScript.src = 'https://www.google.com/recaptcha/api.js';
     recaptchaScript.async = true;
     recaptchaScript.defer = true;
-    recaptchaScript.onerror = showVerificationError;
+    recaptchaScript.onerror = () => {
+      status.textContent = 'The reCAPTCHA service could not be loaded. Please reload the page and try again.';
+    };
     document.head.appendChild(recaptchaScript);
   })();
 </script>
