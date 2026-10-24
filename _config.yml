@@ -12,6 +12,12 @@ excerpt_separator: <!--truncate-->
 timezone: UTC
 exclude:
   - _tmp
+  - AGENTS.md
+  - README.md
+  - LICENSE
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
 announcement:
   enabled: true
   id: site-announcement-1
