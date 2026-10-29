@@ -727,6 +727,14 @@ a:focus {
   font-weight: 600;
 }
 
+.contact-form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form .form-control {
   border-color: var(--site-border);
   background: var(--site-panel-soft);

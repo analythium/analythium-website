@@ -16,6 +16,10 @@
       <label class="form-label" for="blk_text_aohgu4o2zu">Anything you want to share about your plans with us? <span aria-hidden="true">*</span></label>
       <textarea id="blk_text_aohgu4o2zu" class="form-control" name="answers[blk_text_aohgu4o2zu]" placeholder="Your message" rows="6" required></textarea>
     </div>
+    <div class="contact-form-honeypot" aria-hidden="true">
+      <label for="contact-website">Website</label>
+      <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off">
+    </div>
     <input id="blk_hidden_lsrdmik1dk" type="hidden" name="answers[blk_hidden_lsrdmik1dk]" value="website">
     {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
       <div class="col-12">
@@ -29,6 +33,27 @@
   <p class="text-secondary small mt-3 mb-0">* Fields marked with an asterisk are required.</p>
   <p class="text-danger small mt-2 mb-0" id="contact-form-status" role="status" aria-live="polite"></p>
 </form>
+
+<script>
+  (() => {
+    const form = document.querySelector('.contact-form');
+    const honeypot = form.querySelector('#contact-website');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const thankYouUrl = {{ '/thank-you/' | relative_url | jsonify }};
+
+    const redirectIfHoneypotIsFilled = (event) => {
+      if (!honeypot.value) {
+        return;
+      }
+
+      event.preventDefault();
+      window.location.assign(thankYouUrl);
+    };
+
+    submitButton.addEventListener('click', redirectIfHoneypotIsFilled);
+    form.addEventListener('submit', redirectIfHoneypotIsFilled);
+  })();
+</script>
 
 {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
 <script>
